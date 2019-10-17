@@ -17,3 +17,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('subscribe', 'SubscribeController');
+Route::resource('event', 'EventController');

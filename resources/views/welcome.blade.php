@@ -89,8 +89,7 @@
                             Subscribe
                         </button>
                     </form>
-                    <a href="http://" class="btn btn-success">Details</a>
-
+                    <a href="{{ url('event/'.$event->id) }}" class="btn btn-success">Details</a>
                     <br>
                @empty
                    no events
