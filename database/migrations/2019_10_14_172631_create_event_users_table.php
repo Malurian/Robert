@@ -15,8 +15,8 @@ class CreateEventUsersTable extends Migration
     {
         Schema::create('event_users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('user_id');
-            $table->string('event_id');
+            $table->bitInteger('user_id');
+            $table->bitInteger('event_id');
             $table->timestamps();
         });
     }

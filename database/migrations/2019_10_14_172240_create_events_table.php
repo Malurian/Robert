@@ -18,8 +18,10 @@ class CreateEventsTable extends Migration
             $table->string('name');
             $table->string('user_id');
             $table->dateTime('date');
-            $table->text('description');
-            $table->string('image');
+            $table->text('address')->nullable();
+            $table->text('map')->nullable();
+            $table->text('description')->nullable();
+            $table->string('image')->default('default.jpg');
             $table->timestamps();
         });
     }

@@ -20,5 +20,11 @@ class UserTableSeeder extends Seeder
         $user->password = Hash::make('secret');
         $user->is_admin = true;
         $user->save();
+
+        $user = new User;
+        $user->name = 'User One';
+        $user->email = 'userone@gmail.com';
+        $user->password = Hash::make('secret');
+        $user->save();
     }
 }
