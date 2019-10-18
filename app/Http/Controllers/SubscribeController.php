@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\EventUser;
+use Auth;
 
 class SubscribeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -36,8 +43,13 @@ class SubscribeController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd('store');
+
+        $event_user = new EventUser;
+        $event_user->event_id = $request->event_id;
+        $event_user->user_id = Auth::user()->id;
+        $event_user->save();
+        $message = 'Event Subscribed Successfully';
+        return view('success', compact('message'));
     }
 
     /**

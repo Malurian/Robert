@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Event;
-use Auth;
+use App\EventUser;
 
-class EventController extends Controller
+class SubscribersController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -21,7 +19,6 @@ class EventController extends Controller
     public function index()
     {
         //
-        dd('index');
     }
 
     /**
@@ -32,7 +29,6 @@ class EventController extends Controller
     public function create()
     {
         //
-        dd('create');
     }
 
     /**
@@ -44,11 +40,6 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //
-        $input = $request->all();
-        $input['user_id'] = Auth::user()->id;
-        $event = Event::create($input);
-        $message = 'Event Created Successfully';
-        return view('success', compact('message'));
     }
 
     /**
@@ -59,9 +50,8 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
-        $event = Event::where('id', $id)->first();
-        return view('event.index', compact('event'));
+        $subscribers = EventUser::where('event_id', $id)->with('user')->get();
+        return view('event.subscribers', compact('subscribers'));
     }
 
     /**
@@ -73,7 +63,6 @@ class EventController extends Controller
     public function edit($id)
     {
         //
-        dd('edit');
     }
 
     /**
@@ -86,7 +75,6 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         //
-        dd('update');
     }
 
     /**
@@ -98,6 +86,5 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
-        dd('delete');
     }
 }

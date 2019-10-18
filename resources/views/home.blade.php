@@ -30,6 +30,53 @@
                         create
                     </button>
                 </form>
+
+<br>
+<br>
+<br>
+
+                <div>
+                    subscribed events <br>
+
+                    @forelse ($my_subscribed_events as $event)
+                    {{ $event->event->name }}
+                    <form method="POST" action="{{ url('subscribe', $event->id) }}">
+                        <input type="hidden" name="_method" value="delete" />
+                        {!! csrf_field() !!}
+                        <button type="submit" class="btn">
+                            Un-Subscribe
+                        </button>
+                    </form>
+                    @empty
+                        you have not subscribed for any event
+                    @endforelse
+                </div>
+
+<br>
+<br>
+<br>
+
+                <div>
+                    created events <br>
+
+                    @forelse ($my_created_events as $event)
+                    {{ $event->name }}
+                    <form method="POST" action="{{ url('event', $event->id) }}">
+                        <input type="hidden" name="_method" value="delete" />
+                        {!! csrf_field() !!}
+                        <button type="submit" class="btn">
+                            Delete Event
+                        </button>
+                    </form>
+                    <a href="{{ url('subscriber/'.$event->id ) }}">View Event Subscribers</a>
+
+                        <br>
+                    @empty
+                        You have Created Any Event
+                    @endforelse
+
+
+                </div>
             </div>
         </div>
     </div>
