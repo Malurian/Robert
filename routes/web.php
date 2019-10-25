@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/', 'WelcomeController@index')->name('index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/index', 'HomeController@index')->name('index');
 Route::resource('subscribe', 'SubscribeController');
 Route::resource('subscriber', 'SubscribersController');
 Route::resource('event', 'EventController');
