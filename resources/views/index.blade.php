@@ -8,7 +8,7 @@
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>im Event</title>
+        <title>Event Sponsors</title>
 
         <!-- Favicons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -48,7 +48,6 @@
         <div class="wrapper">
             <!-- HEADER -->
             <header class="header fixed">
-
                 <!-- Top Line -->
                 <div class="top-line">
                     <div class="container">
@@ -67,11 +66,8 @@
                         <!-- Logo -->
                         <div class="logo">
                             <a href="index.html" class="scroll-to">
-                                <span class="fa-stack">
-                                    <i class="fa logo-hex fa-stack-2x"></i>
-                                    <i class="fa logo-fa fa-map-marker fa-stack-1x"></i>
-                                </span>
-                                im Event
+                                    <img src="assets/img/logo.jpeg" style="width: 60px;" alt=""/>
+                                Event Sponsors
                             </a>
                         </div>
                         <!-- /Logo -->
@@ -99,10 +95,11 @@
                             </ul>
                         </nav>
                         <!-- /Navigation -->
-
+                       
                     </div>
                 </div>
             </header>
+            
             <!-- /HEADER -->
 
             <!-- Content area -->
@@ -198,7 +195,6 @@
                     </div>
                 </section>
                 <!-- /Featured Event -->
-
                 <!-- PAGE -->
                 <section class="page-section">
                     <div class="container">
@@ -217,190 +213,47 @@
 
                         <div class="row thumbnails events vertical isotope isotope-items">
 
-                            <div class="col-md-6 col-sm-6 isotope-item festival">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="caption">
-                                                <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from R49,99</p>
-                                                <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6 isotope-item conference">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="caption">
-                                                <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from R49,99</p>
-                                                <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
+                            @forelse ($events as $event)                                
+                                <div class="col-md-6 col-sm-6 isotope-item festival">
+                                        <div class="thumbnail no-border no-padding">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="media">
+                                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                                        <img src="{{ asset('/images/'. $event->image ) }}" alt="">
+                                                        <div class="caption hovered"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="caption">
+                                                        <h3 class="caption-title"><a href="#">{{$event->name}}</a></h3>
+                                                        <p class="caption-category"><i class="fa fa-file-text-o"></i> {{$event->date}} on Manhattan / New York</p>
+                                                        <p class="caption-price">Tickets from R49,99</p>
+                                                        <p class="caption-text">{{$event->description}} </p>
+                                                        <p class="caption-more">
+                                                            <form method="POST" action="{{ url('subscribe') }}">
+                                                                <input type="hidden" name="event_id" value="{{ $event->id }}">
+                                                                {!! csrf_field() !!}
+                                                                <button type="submit" class="btn btn-theme">
+                                                                    Subscribe
+                                                                </button>
+                                                            </form>
+                                                        </p>
+                                                        <p class="caption-more">
+                                                            <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Event Details</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                           @empty
+                               no events
+                           @endforelse
 
-                                </div>
-                            </div>
+                            
 
-                            <div class="col-md-6 col-sm-6 isotope-item miscellaneous">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="caption">
-                                                <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from R49,99</p>
-                                                <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6 isotope-item festival playground">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="caption">
-                                                <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from R49,99</p>
-                                                <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6 isotope-item festival conference">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="caption">
-                                                <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from R49,99</p>
-                                                <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6 isotope-item conference playground">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="caption">
-                                                <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from R49,99</p>
-                                                <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6 isotope-item festival conference">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="caption">
-                                                <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from R49,99</p>
-                                                <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6 isotope-item playground">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="caption">
-                                                <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from R49,99</p>
-                                                <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
 
                         <div class="text-center margin-top">
@@ -1554,17 +1407,29 @@
                             </h1>
                         </div>
                         <form method="post" action="{{ route('login') }}" class="registration-form alt" name="registration-form-alt" id="registration-form-alt">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-12 form-alert"></div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="email" placeholder="Enter Email" title="" data-toggle="tooltip" class="form-control input-name  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus data-original-title="Name is required">
                                     </div>
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="password"  placeholder="Password"  title="" data-toggle="tooltip" class="form-control input-password @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" data-original-title="Password">
                                     </div>
+                                    
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                                 </div>                                  
                                 <div class="col-sm-12">
                                     <div class="text-center">
@@ -1586,6 +1451,7 @@
                             </h1>
                         </div>
                         <form method="post" action="{{ route('register') }}" class="registration-form alt" name="registration-form-alt" id="registration-form-alt">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-12 form-alert"></div>
                                 <div class="col-sm-12">

@@ -43,11 +43,17 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $imageName = '';
+         if ($request->image){
+            $imageName = time().Auth::user()->id. '.' .$request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+        }
         $input = $request->all();
         $input['user_id'] = Auth::user()->id;
+        $input['image'] = $imageName;
         $event = Event::create($input);
         $message = 'Event Created Successfully';
+        
         return view('success', compact('message'));
     }
 
