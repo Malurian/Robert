@@ -22,7 +22,7 @@
 												<span class="fa fa-pencil" aria-hidden="true"></span>
 											</a>
 											<div class="profile-label mt-3">
-												<span>Christopher</span>
+												<span> {{ auth()->user()->name }} </span>
 											</div>
 
 											<div class="profile-stars">
@@ -87,7 +87,7 @@
 													<i class="fa fa-envelope-o" aria-hidden="true"></i>
 												</div>
 												<div class="media-body ml-5">
-													<h6 class="mediafont text-dark mb-0">Email Address</h6><a class="d-block" href="">georgemestayer@adminor.com</a>
+													<h6 class="mediafont text-dark mb-0">{{ auth()->user()->email }}</h6><a class="d-block" href="">georgemestayer@adminor.com</a>
 												</div>
 												<!-- media-body -->
 											</div>
@@ -120,7 +120,7 @@
 													<table class="table row table-borderless w-100 m-0 ">
 														<tbody class="col-lg-6 p-0">
 															<tr>
-																<td><strong>Full Name :</strong> Christopher Greear</td>
+																<td><strong>Full Name :</strong> {{ auth()->user()->name }}</td>
 															</tr>
 															<tr>
 																<td><strong>Location :</strong> USA</td>
@@ -134,7 +134,7 @@
 																<td><strong>Website :</strong> adminor.com</td>
 															</tr>
 															<tr>
-																<td><strong>Email :</strong> christopher@adminor.com</td>
+																<td><strong>Email :</strong> {{ auth()->user()->email }}</td>
 															</tr>
 															<tr>
 																<td><strong>Phone :</strong> +125 254 3562 </td>

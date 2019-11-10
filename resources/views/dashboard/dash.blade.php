@@ -122,7 +122,7 @@
 							<div class="col-lg-12 col-xl-8 col-md-12">
 								<div class="card ">
 									<div class="card-header">
-										<h5 class="card-title">Events Table </h5>
+										<h5 class="card-title">Events Table</h5>
 									</div>
 									<div class="card-body">
 										<div class="table-responsive">
@@ -137,56 +137,16 @@
 													</tr>
 												</thead>
 												<tbody>
-													<!-- <tr>
-														<td>Wilber S. Rusch</td>
-														<td>2014/03/04</td>
-														<td>Editor</td>
-														<td>USA</td>
-														<td><span class="badge badge-primary">Active</span>
-														</td>
-													</tr>
-													<tr>
-														<td>Joey D. Coronel</td>
-														<td>2013/09/25</td>
-														<td>Staff</td>
-														<td>Canada</td>
-														<td><span class="badge badge-success">Banned</span></td>
-													</tr>
-													<tr>
-														<td>Micah H. Boice</td>
-														<td>2015/02/13</td>
-														<td>User</td>
-														<td>South Africa</td>
-														<td><span class="badge badge-danger">Inactive</span></td>
-													</tr>
-													<tr>
-														<td>Deshawn B. Nitta</td>
-														<td>2013/01/02</td>
-														<td>Editor</td>
-														<td>Nether Lands</td>
-														<td><span class="badge badge-warning">Pending</span></td>
-													</tr>
-													<tr>
-														<td>Herschel R. Jade</td>
-														<td>2015/12/23</td>
-														<td>User</td>
-														<td>Germany</td>
-														<td><span class="badge badge-info">Banned</span></td>
-													</tr>
-													<tr>
-														<td>Sanderson</td>
-														<td>2016/11/21</td>
-														<td>Editor</td>
-														<td>India</td>
-														<td><span class="badge badge-primary">Active</span></td>
-													</tr> -->
-													<tr>
-														<td>Game Convention</td>
-														<td>2019/08/17</td>
-														<td>Staff</td>
-														<td>2019/11/30</td>
-														<td><span class="badge badge-success">Inactive</span></td>
-													</tr>
+													@foreach ($my_created_events as $event)
+														<tr>
+															<td>{{ $event->name }}</td>
+															<td>2019/08/17</td>
+															<td>Staff</td>
+															<td>2019/11/30</td>
+															<td><span class="badge badge-success">Inactive</span></td>
+														</tr>
+													@endforeach
+													
 												</tbody>
 											</table>
 										</div>
@@ -196,6 +156,45 @@
 									</div>
 								</div>
 							</div>
+
+							<div class="col-lg-12 col-xl-8 col-md-12">
+								<div class="card ">
+									<div class="card-header">
+										<h5 class="card-title">Subscribed Events</h5>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-striped card-table table-condensed mt-0 table-nowrap border">
+												<thead>
+													<tr>
+														<th>Event Name</th>
+														<th>Date registered</th>
+														<th>Event Date</th>
+														<th>Location</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													@foreach ($my_subscribed_events as $event)
+														<tr>
+															<td>{{ $event->event->name }}</td>
+															<td>2019/08/17</td>
+															<td>Staff</td>
+															<td>2019/11/30</td>
+															<td><span class="badge badge-success">Inactive</span></td>
+														</tr>
+													@endforeach
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="card-footer text-center">
+										<a href="#"><i class="fa fa-angle-down"></i> View More</a>
+									</div>
+								</div>
+							</div>
+							
 						</div>
 					</div>
 					@endsection

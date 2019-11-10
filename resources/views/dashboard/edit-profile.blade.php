@@ -22,7 +22,7 @@
 													<span class="avatar brround avatar-xl" style="background-image: url(dashboard\assets/images/faces/male/16.jpeg)"></span>
 												</div>
 												<div class="col-12">
-													<h4 class="mb-1 mt-2 ">Christopher</h4>
+													<h4 class="mb-1 mt-2 ">{{ auth()->user()->name }}</h4>
 													<p class="mb-0">Adminor Administrator</p>
 												</div>
 											</div>
@@ -30,11 +30,11 @@
 										<div class="card-body">
 											<div class="form-group">
 												<label class="form-label">User Name</label>
-													<input type="text" class="form-control" name="example-text-input" placeholder="Name">
+											<input type="text" class="form-control" name="example-text-input" value="{{ auth()->user()->name }}" placeholder="Name">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Password</label>
-												<input type="text" class="form-control" name="password" placeholder="••••••">
+												<input type="password" class="form-control" name="password" value="{{ auth()->user()->password }}" placeholder="••••••">
 											</div>
 											<div class="form-group">
 											    <label class="form-label">About</label>
@@ -133,13 +133,13 @@
 																		<div class="col">
 																			<div class="form-group">
 																				<label class="form-label">Full Name</label>
-																				<input type="text" class="form-control" name="example-text-input" placeholder="Name">
+																				<input type="text" class="form-control" name="example-text-input" value="{{ auth()->user()->name }}" placeholder="Name">
 																			</div>
 																		</div>
 																		<div class="col">
 																			<div class="form-group">
 																				<label class="form-label">Username</label>
-																				<input class="form-control" type="text" name="username" placeholder="johnny.s" value=" Christopher">
+																				<input class="form-control" type="text" name="username" value="{{ auth()->user()->username }}" placeholder="johnny.s" value=" Christopher">
 																			</div>
 																		</div>
 																	</div>
@@ -147,7 +147,7 @@
 																		<div class="col">
 																			<div class="form-group">
 																				<label class="form-label">Email</label>
-																				<input class="form-control" type="text" placeholder="user@example.com">
+																				<input class="form-control" type="text" value="{{ auth()->user()->email }}" placeholder="user@example.com">
 																			</div>
 																		</div>
 
