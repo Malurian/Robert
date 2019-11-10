@@ -4,15 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Event;
+use App\EventUser;
 use Auth;
 
-class EventController extends Controller
+class DashboardController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -20,8 +16,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::get();
-        return view('view-events', compact('events'));
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();
+        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();
+        return view('dashboard/dash', compact('my_created_events','my_subscribed_events'));
     }
 
     /**
@@ -31,8 +28,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
-        dd('create');
+        // dd('create');
+        return view('dashboard/create-events');
     }
 
     /**
@@ -43,18 +40,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        $imageName = '';
-         if ($request->image){
-            $imageName = time().Auth::user()->id. '.' .$request->image->extension();
-            $request->image->move(public_path('images'), $imageName);
-        }
-        $input = $request->all();
-        $input['user_id'] = Auth::user()->id;
-        $input['image'] = $imageName;
-        $event = Event::create($input);
-        $message = 'Event Created Successfully';
-        
-        return view('success', compact('message'));
+        //
     }
 
     /**
@@ -66,8 +52,6 @@ class EventController extends Controller
     public function show($id)
     {
         //
-        $event = Event::where('id', $id)->first();
-        return view('event.index', compact('event'));
     }
 
     /**
@@ -79,7 +63,6 @@ class EventController extends Controller
     public function edit($id)
     {
         //
-        dd('edit');
     }
 
     /**
@@ -92,7 +75,6 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         //
-        dd('update');
     }
 
     /**
@@ -104,6 +86,5 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
-        dd('delete');
     }
 }

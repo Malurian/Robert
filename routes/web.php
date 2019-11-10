@@ -22,27 +22,16 @@ Route::resource('event', 'EventController');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::get('/dash', function () {
-    return view('dashboard/dash');
-});
 
-Route::get('/profile', function () {
-    return view('dashboard/profile');
-});
+Route::get('dash', 'DashboardController@index');
+Route::get('create-events', 'DashboardController@create');
 
-Route::get('/edit-profile', function () {
-    return view('dashboard/edit-profile');
-});
+Route::get('profile', 'UserController@index');
+
+Route::get('edit-profile', 'UserController@show');
 
 
-Route::get('/create-events', function () {
-    return view('dashboard/create-events');
-});
 
-Route::get('/view-events', function () {
-    return view('view-events');
-});
+Route::get('/view-events', 'EventController@index');
 
-Route::get('/contact-us', function () {
-    return view('contact-us');
-});
+Route::resource('contact-us', 'ContactController');

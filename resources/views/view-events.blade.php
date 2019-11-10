@@ -229,64 +229,7 @@
                                 <div id="list-view"  class="tab-pane fade active in" role="tabpanel">
                                     <div class="thumbnails events vertical">
 
-                                        <div class="thumbnail no-border no-padding">
-                                            <div class="row">
-                                                <div class="col-md-3 col-sm-3 col-xs-4">
-                                                    <div class="media">
-                                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                                        <img src="assets/img/preview/event-1.jpg" alt="">
-                                                        <div class="caption hovered"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-9 col-sm-9 col-xs-8">
-                                                    <div class="caption">
-                                                        <a href="#" class="pull-left">
-                                                            <span class="fa-stack fa-lg">
-                                                                <i class="fa fa-stack-2x fa-circle-thin"></i>
-                                                                <i class="fa fa-stack-1x fa-share-alt"></i>
-                                                            </span>
-                                                        </a>
-                                                        <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                        <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                        <p class="caption-price">Tickets from R49,99</p>
-                                                        <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis. Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-                                                        <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <hr class="page-divider half"/>
-
-                                        <div class="thumbnail no-border no-padding">
-                                            <div class="row">
-                                                <div class="col-md-3 col-sm-3 col-xs-4">
-                                                    <div class="media">
-                                                        <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
-                                                        <img src="assets/img/preview/event-1.jpg" alt="">
-                                                        <div class="caption hovered"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-9 col-sm-9 col-xs-8">
-                                                    <div class="caption">
-                                                        <a href="#" class="pull-left">
-                                                            <span class="fa-stack fa-lg">
-                                                                <i class="fa fa-stack-2x fa-circle-thin"></i>
-                                                                <i class="fa fa-stack-1x fa-share-alt"></i>
-                                                            </span>
-                                                        </a>
-                                                        <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                        <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                        <p class="caption-price">Tickets from R49,99</p>
-                                                        <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis. Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-                                                        <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <hr class="page-divider half"/>
+                                        {{ $events }}
 
                                         <div class="thumbnail no-border no-padding">
                                             <div class="row">
@@ -317,35 +260,7 @@
 
                                         <hr class="page-divider half"/>
 
-                                        <div class="thumbnail no-border no-padding">
-                                            <div class="row">
-                                                <div class="col-md-3 col-sm-3 col-xs-4">
-                                                    <div class="media">
-                                                        <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
-                                                        <img src="assets/img/preview/event-1.jpg" alt="">
-                                                        <div class="caption hovered"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-9 col-sm-9 col-xs-8">
-                                                    <div class="caption">
-                                                        <a href="#" class="pull-left">
-                                                            <span class="fa-stack fa-lg">
-                                                                <i class="fa fa-stack-2x fa-circle-thin"></i>
-                                                                <i class="fa fa-stack-1x fa-share-alt"></i>
-                                                            </span>
-                                                        </a>
-                                                        <h3 class="caption-title"><a href="#">Standart Event Name Here</a></h3>
-                                                        <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October at 20:00 - 22:00 on Manhattan / New York</p>
-                                                        <p class="caption-price">Tickets from R49,99</p>
-                                                        <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis. Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-                                                        <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <hr class="page-divider half"/>
-
+                                        
                                         <div class="thumbnail no-border no-padding">
                                             <div class="row">
                                                 <div class="col-md-3 col-sm-3 col-xs-4">

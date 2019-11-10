@@ -3,16 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Event;
 use Auth;
 
-class EventController extends Controller
+class UserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -20,8 +14,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::get();
-        return view('view-events', compact('events'));
+        $user = Auth::user();
+        return view('dashboard/profile', compact('user'));
     }
 
     /**
@@ -32,7 +26,6 @@ class EventController extends Controller
     public function create()
     {
         //
-        dd('create');
     }
 
     /**
@@ -43,18 +36,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        $imageName = '';
-         if ($request->image){
-            $imageName = time().Auth::user()->id. '.' .$request->image->extension();
-            $request->image->move(public_path('images'), $imageName);
-        }
-        $input = $request->all();
-        $input['user_id'] = Auth::user()->id;
-        $input['image'] = $imageName;
-        $event = Event::create($input);
-        $message = 'Event Created Successfully';
-        
-        return view('success', compact('message'));
+        //
     }
 
     /**
@@ -63,11 +45,10 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
-        $event = Event::where('id', $id)->first();
-        return view('event.index', compact('event'));
+        $user = Auth::user();
+        return view('dashboard/edit-profile', compact('user'));
     }
 
     /**
@@ -79,7 +60,6 @@ class EventController extends Controller
     public function edit($id)
     {
         //
-        dd('edit');
     }
 
     /**
@@ -92,7 +72,6 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         //
-        dd('update');
     }
 
     /**
@@ -104,6 +83,5 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
-        dd('delete');
     }
 }
