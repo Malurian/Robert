@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
 
 class ContactController extends Controller
 {
@@ -33,8 +34,11 @@ class ContactController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {        
+        $input = $request->all();
+        $event = Contact::create($input);
+        $message = 'Thank You For Contacting Us';        
+        return view('success', compact('message'));
     }
 
     /**
