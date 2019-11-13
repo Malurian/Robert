@@ -146,7 +146,7 @@
 										</div>
 										<div class="panel panel-primary">
 											<div class=" tab-menu-heading">
-												<div class="tabs-menu2 ">
+												<div class="tabs-menu2">
 													<!-- Tabs -->
 													<ul class="nav panel-tabs">
 														<li><a href="#tab-friends" class="active" data-toggle="tab">Friends</a></li>
@@ -163,9 +163,11 @@
 																<div class="card">
 																	<div class="card-body text-center">
 																		<span class="avatar avatar-xxl brround" style="background-image: url(dashboard\assets/images/faces/male/25.jpeg)"></span>
-																		<h4 class="h4 mb-0 mt-3">James Thomas
-																		<p class="card-text">Web designer</p>
-																	</h4></div>
+																		<h4 class="h4 mb-0 mt-3">
+																			James Thomas
+																			<p class="card-text">Web designer</p>
+																		</h4>
+																	</div>
 																	<div class="card-footer text-center">
 																		<div class="row user-social-detail">
 																			<div class="col-lg-4 col-sm-4 col-4">

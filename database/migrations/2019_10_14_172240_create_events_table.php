@@ -19,6 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('user_id');
             $table->dateTime('date');
             $table->text('address')->nullable();
+            $table->double('amount', 12, 2)->nullable()->default(0.00);('address')->nullable();
             $table->text('map')->nullable();
             $table->text('description')->nullable();
             $table->string('image')->default('default.jpg');

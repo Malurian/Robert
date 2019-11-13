@@ -18,6 +18,7 @@ class UserTableSeeder extends Seeder
         $user->name = 'Admin';
         $user->email = 'admin@gmail.com';
         $user->password = Hash::make('secret');
+        $user->wallet = 5000
         $user->is_admin = true;
         $user->save();
 
@@ -25,6 +26,7 @@ class UserTableSeeder extends Seeder
         $user->name = 'User One';
         $user->email = 'userone@gmail.com';
         $user->password = Hash::make('secret');
+        $user->wallet = 10000
         $user->save();
     }
 }
