@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\EventUser;
 use Auth;
+use App\User;
 
 class SubscribeController extends Controller
 {
@@ -48,6 +49,13 @@ class SubscribeController extends Controller
         $event_user->event_id = $request->event_id;
         $event_user->user_id = Auth::user()->id;
         $event_user->save();
+
+        // remove the amount from the current user (subscriber)
+        User::where('id', Auth::user()->id)->decrement('wallet', $request->amount);
+
+        // remove the amount from the event owner
+        User::where('id', $request->user_id)->increment('wallet', $request->amount);
+
         $message = 'Event Subscribed Successfully';
         return view('success', compact('message'));
     }

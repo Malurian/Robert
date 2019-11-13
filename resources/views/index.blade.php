@@ -126,16 +126,20 @@
                                                     <div class="caption">
                                                         <h3 class="caption-title"><a href="#">{{$event->name}}</a></h3>
                                                         <p class="caption-category"><i class="fa fa-file-text-o"></i> {{$event->date}} on Manhattan / New York</p>
-                                                        <p class="caption-price">Tickets from R49,99</p>
+                                                        <p class="caption-price">Tickets from R{{$event->amount}}</p>
                                                         <p class="caption-text">{{$event->description}} </p>
                                                         <p class="caption-more">
+                                                            <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Subscribe</a>
+                                                            {{-- 
                                                             <form method="POST" action="{{ url('subscribe') }}">
                                                                 <input type="hidden" name="event_id" value="{{ $event->id }}">
                                                                 {!! csrf_field() !!}
                                                                 <button type="submit" class="btn btn-theme">
                                                                     Subscribe
                                                                 </button>
-                                                            </form>
+                                                            </form> 
+                                                            --}}
+
                                                         </p>
                                                         <p class="caption-more">
                                                             <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Event Details</a>
