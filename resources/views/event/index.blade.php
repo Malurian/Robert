@@ -81,7 +81,26 @@
 
             <div class="content">
                 @if ($event ?? '')
-                    {{$event->name}} {{$event->date}} {{$event->description}} {{$event->map}}
+                    {{$event->name}} {{$event->date}} {{$event->description}} {{$event->map}}  ${{$event->amount}}
+
+                    
+                    @if ( auth::user()->wallet >= $event->amount)
+                        <form method="POST" action="{{ url('subscribe') }}">
+                            <input type="hidden" name="event_id" value="{{ $event->id }}">
+                            <input type="hidden" name="user_id" value="{{ $event->user_id }}">
+                            <input type="hidden" name="amount" value="{{ $event->amount }}">
+
+                            {!! csrf_field() !!}
+                            <button type="submit" class="btn btn-theme">
+                                Subscribe
+                            </button>
+                        </form>
+
+                        current wallet balnec: {{ auth::user()->wallet }}
+                    @else
+                        {{ 'no' }}
+                    @endif
+
                 @else
                     something went wrong try again
                 @endif

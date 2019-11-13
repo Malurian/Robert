@@ -231,13 +231,17 @@
                                                         <p class="caption-price">Tickets from R{{$event->amount}}</p>
                                                         <p class="caption-text">{{$event->description}} </p>
                                                         <p class="caption-more">
+                                                            <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Subscribe</a>
+                                                            {{-- 
                                                             <form method="POST" action="{{ url('subscribe') }}">
                                                                 <input type="hidden" name="event_id" value="{{ $event->id }}">
                                                                 {!! csrf_field() !!}
                                                                 <button type="submit" class="btn btn-theme">
                                                                     Subscribe
                                                                 </button>
-                                                            </form>
+                                                            </form> 
+                                                            --}}
+
                                                         </p>
                                                         <p class="caption-more">
                                                             <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Event Details</a>
