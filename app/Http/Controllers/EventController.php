@@ -8,6 +8,11 @@ use Auth;
 
 class EventController extends Controller
 {
+    public function aboutUs()
+    {
+        return view('about-us');
+    }
+
     public function __construct()
     {
         $this->middleware('auth');

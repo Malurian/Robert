@@ -1,0 +1,747 @@
+<!-- /PAGE SPONSORS -->
+
+                <!-- PAGE SPEAKERS -->
+                {{-- <section class="page-section light" id="speakers">
+                    <div class="container">
+                        <h1 class="section-title">
+                            <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-user fa-stack-1x"></i></span></span>
+                            <span data-animation="fadeInUp" data-animation-delay="500" class="title-inner">Event Speakers <small> / meet with greaters</small></span>
+                        </h1>
+
+                        <!-- Speakers row -->
+                        <div class="thumbnails clear">
+                            <div class="carousel-slider">
+                                <div class="owl-carousel slide-4">
+                                    <div data-animation="fadeInUp" data-animation-delay="100">
+                                        <div class="thumbnail no-border no-padding text-center">
+                                            <div class="rehex speaker-avatar">
+                                                <div class="rehex-deg">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-inner">
+                                                            <div class="media">
+                                                                <img src="assets/img/preview/speaker-1.jpg" alt="">
+                                                                <div class="caption hovered">
+                                                                    <div class="caption-wrapper div-table">
+                                                                        <div class="caption-inner div-cell">
+                                                                            <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption before-media">
+                                                <h3 class="caption-title">Speaker name here</h3>
+                                                <p class="caption-category">Co Founder</p>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                <ul class="social-line list-inline text-center">
+                                                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- -->
+                                    <div  data-animation="fadeInUp" data-animation-delay="300">
+                                        <div class="thumbnail no-border no-padding text-center">
+                                            <div class="rehex speaker-avatar">
+                                                <div class="rehex-deg">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-inner">
+                                                            <div class="media">
+                                                                <img src="assets/img/preview/speaker-2.jpg" alt="">
+                                                                <div class="caption hovered">
+                                                                    <div class="caption-wrapper div-table">
+                                                                        <div class="caption-inner div-cell">
+                                                                            <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption before-media">
+                                                <h3 class="caption-title">Speaker name here</h3>
+                                                <p class="caption-category">Developer</p>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                <ul class="social-line list-inline text-center">
+                                                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- -->
+                                    <div data-animation="fadeInUp" data-animation-delay="500">
+                                        <div class="thumbnail no-border no-padding text-center">
+                                            <div class="rehex speaker-avatar">
+                                                <div class="rehex-deg">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-inner">
+                                                            <div class="media">
+                                                                <img src="assets/img/preview/speaker-3.jpg" alt="">
+                                                                <div class="caption hovered">
+                                                                    <div class="caption-wrapper div-table">
+                                                                        <div class="caption-inner div-cell">
+                                                                            <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption before-media">
+                                                <h3 class="caption-title">Speaker name here</h3>
+                                                <p class="caption-category">Designer</p>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                <ul class="social-line list-inline text-center">
+                                                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- -->
+                                    <div data-animation="fadeInUp" data-animation-delay="700">
+                                        <div class="thumbnail no-border no-padding text-center">
+                                            <div class="rehex speaker-avatar">
+                                                <div class="rehex-deg">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-inner">
+                                                            <div class="media">
+                                                                <img src="assets/img/preview/speaker-4.jpg" alt="">
+                                                                <div class="caption hovered">
+                                                                    <div class="caption-wrapper div-table">
+                                                                        <div class="caption-inner div-cell">
+                                                                            <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption before-media">
+                                                <h3 class="caption-title">Speaker name here</h3>
+                                                <p class="caption-category">Animator</p>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                <ul class="social-line list-inline text-center">
+                                                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Speakers row -->
+
+                        <div class="text-center margin-top">
+                            <a data-animation="fadeInUp" data-animation-delay="100" href="#" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-user"></i> See all speakers</a>
+                        </div>
+                    </div>
+                </section> --}}
+                <!-- /PAGE SPEAKERS -->
+
+                <!-- PAGE -->
+                {{-- <section class="page-section color">
+                    <div class="container">
+                        <h1 class="section-title">
+                            <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
+                            <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">im Event  <small> / Landing Page</small></span>
+                        </h1>
+                        <p>One Page Event and Conference Theme is a very clean, modern and outstanding designed HTML template for multi purpose for any business events, conference, party etc.</p>
+                        <p>
+                            <a class="btn btn-theme" target="_blank" href="http://themeforest.net/item/im-event-one-page-event-conference-landing-page/8334416">Purchase template</a>
+                        </p>
+                    </div>
+                </section> --}}
+                <!-- /PAGE -->
+
+                <!-- PAGE -->
+                {{-- <section class="page-section">
+                    <div class="container">
+                        <h1 class="section-title">
+                            <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-file-text-o fa-stack-1x"></i></span></span>
+                            <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">Recent Blog Posts <small> / get news!</small></span>
+                        </h1>
+                        <div class="post-row">
+                            <div class="carousel-slider">
+                                <div class="owl-carousel slide-3">
+                                    <!-- -->
+                                    <div>
+                                        <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
+                                            <div class="post-media">
+                                                <div class="post-type">
+                                                    <i class="fa fa-video-camera"></i>
+                                                </div>
+                                                <img src="assets/img/preview/recent-post-1.jpg" alt=""/>
+                                            </div>
+                                            <div class="post-header">
+                                                <h2 class="post-title"><a href="#">Standart Blog Post Header Here</a></h2>
+                                                <div class="post-meta">
+                                                    <span class="post-date">
+                                                        Posted on
+                                                        <span class="day">17th</span>
+                                                        <span class="month">May</span>
+                                                        <span class="year">2015</span>
+                                                    </span>
+                                                    <span class="pull-left">
+                                                        <i class="fa fa-comment"></i> <a href="#">12</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post-body">
+                                                <div class="post-excerpt">
+                                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristiquetus et senectus et netus et malesuada ac turpis.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-footer"></div>
+                                        </article>
+                                    </div>
+
+                                    <!-- -->
+                                    <div>
+                                        <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="300">
+                                            <div class="post-media">
+                                                <div class="post-type">
+                                                    <i class="fa fa-photo"></i>
+                                                </div>
+                                                <img src="assets/img/preview/recent-post-2.jpg" alt=""/>
+                                            </div>
+                                            <div class="post-header">
+                                                <h2 class="post-title"><a href="#">Standart Blog Post Header Here</a></h2>
+                                                <div class="post-meta">
+                                                    <span class="post-date">
+                                                        Posted on
+                                                        <span class="day">17th</span>
+                                                        <span class="month">May</span>
+                                                        <span class="year">2015</span>
+                                                    </span>
+                                                    <span class="pull-left">
+                                                        <i class="fa fa-comment"></i> <a href="#">12</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post-body">
+                                                <div class="post-excerpt">
+                                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristiquetus et senectus et netus et malesuada ac turpis.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-footer"></div>
+                                        </article>
+                                    </div>
+
+                                    <!-- -->
+                                    <div>
+                                        <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="500">
+                                            <div class="post-media">
+                                                <div class="post-type">
+                                                    <i class="fa fa-music"></i>
+                                                </div>
+                                                <img src="assets/img/preview/recent-post-3.jpg" alt=""/>
+                                            </div>
+                                            <div class="post-header">
+                                                <h2 class="post-title"><a href="#">Standart Blog Post Header Here</a></h2>
+                                                <div class="post-meta">
+                                                    <span class="post-date">
+                                                        Posted on
+                                                        <span class="day">17th</span>
+                                                        <span class="month">May</span>
+                                                        <span class="year">2015</span>
+                                                    </span>
+                                                    <span class="pull-left">
+                                                        <i class="fa fa-comment"></i> <a href="#">12</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post-body">
+                                                <div class="post-excerpt">
+                                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristiquetus et senectus et netus et malesuada ac turpis.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-footer"></div>
+                                        </article>
+                                    </div>
+
+                                    <!-- -->
+                                    <div>
+                                        <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="500">
+                                            <div class="post-media">
+                                                <div class="post-type">
+                                                    <i class="fa fa-music"></i>
+                                                </div>
+                                                <img src="assets/img/preview/recent-post-1.jpg" alt=""/>
+                                            </div>
+                                            <div class="post-header">
+                                                <h2 class="post-title"><a href="#">Standart Blog Post Header Here</a></h2>
+                                                <div class="post-meta">
+                                                    <span class="post-date">
+                                                        Posted on
+                                                        <span class="day">17th</span>
+                                                        <span class="month">May</span>
+                                                        <span class="year">2015</span>
+                                                    </span>
+                                                    <span class="pull-left">
+                                                        <i class="fa fa-comment"></i> <a href="#">12</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post-body">
+                                                <div class="post-excerpt">
+                                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristiquetus et senectus et netus et malesuada ac turpis.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-footer"></div>
+                                        </article>
+                                    </div>
+
+                                    <!-- -->
+                                    <div>
+                                        <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="500">
+                                            <div class="post-media">
+                                                <div class="post-type">
+                                                    <i class="fa fa-music"></i>
+                                                </div>
+                                                <img src="assets/img/preview/recent-post-2.jpg" alt=""/>
+                                            </div>
+                                            <div class="post-header">
+                                                <h2 class="post-title"><a href="#">Standart Blog Post Header Here</a></h2>
+                                                <div class="post-meta">
+                                                    <span class="post-date">
+                                                        Posted on
+                                                        <span class="day">17th</span>
+                                                        <span class="month">May</span>
+                                                        <span class="year">2015</span>
+                                                    </span>
+                                                    <span class="pull-left">
+                                                        <i class="fa fa-comment"></i> <a href="#">12</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post-body">
+                                                <div class="post-excerpt">
+                                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristiquetus et senectus et netus et malesuada ac turpis.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-footer"></div>
+                                        </article>
+                                    </div>
+
+                                    <!-- -->
+                                    <div>
+                                        <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="500">
+                                            <div class="post-media">
+                                                <div class="post-type">
+                                                    <i class="fa fa-music"></i>
+                                                </div>
+                                                <img src="assets/img/preview/recent-post-3.jpg" alt=""/>
+                                            </div>
+                                            <div class="post-header">
+                                                <h2 class="post-title"><a href="#">Standart Blog Post Header Here</a></h2>
+                                                <div class="post-meta">
+                                                    <span class="post-date">
+                                                        Posted on
+                                                        <span class="day">17th</span>
+                                                        <span class="month">May</span>
+                                                        <span class="year">2015</span>
+                                                    </span>
+                                                    <span class="pull-left">
+                                                        <i class="fa fa-comment"></i> <a href="#">12</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post-body">
+                                                <div class="post-excerpt">
+                                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristiquetus et senectus et netus et malesuada ac turpis.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-footer"></div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center margin-top">
+                            <a data-animation="flipInY" data-animation-delay="100" href="blog.html" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-file-text-o"></i> &nbsp;See all news</a>
+                        </div>
+                    </div>
+                </section> --}}
+                <!-- /PAGE -->
+
+                <!-- PAGE -->
+
+
+                
+                <!-- PAGE -->
+                {{-- <section class="page-section no-padding-bottom">
+                    <div class="container">
+                        <div class="section-title pull-right" style="width: auto;">
+                            <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-picture-o fa-stack-1x"></i></span></span>
+                        </div>
+                        <ul id="filtrable-gallery" class="filtrable clearfix">
+                            <li class="all current"><a href="#" data-filter="*">All</a></li>
+                            <li class="photos"><a href="#" data-filter=".photos">Photos</a></li>
+                            <li class="videos"><a href="#" data-filter=".videos">Videos</a></li>
+                            <li class="gallery"><a href="#" data-filter=".gallery">Gallery</a></li>
+                        </ul>
+                        <div class="clear clearfix overflowed"></div>
+                    </div>
+                </section>
+
+                <section class="page-section no-padding-top light">
+                    <div class="container full-width">
+
+                        <div class="row thumbnails no-padding gallery isotope isotope-items">
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 isotope-item photos ">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <img src="assets/img/preview/latest-1a.jpg" alt="" >
+                                        <div class="caption hovered">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <p class="caption-buttons">
+                                                        <a href="#" class="btn caption-zoom"><i class="fa fa-heart"></i></a>
+                                                        <a href="assets/img/preview/latest-1.jpg"    rel="prettyPhoto[gallery2]" title="CONFERENCE PARTY" class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caption hovered back">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <h3 class="caption-title">CONFERENCE PARTY</h3>
+                                                    <p class="caption-category">in Istanbul</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 isotope-item videos">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <img src="assets/img/preview/latest-2a.jpg" alt="">
+                                        <div class="caption hovered">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <p class="caption-buttons">
+                                                        <a href="#" class="btn caption-zoom"><i class="fa fa-heart"></i></a>
+                                                        <a  href="assets/img/preview/latest-2.jpg"   rel="prettyPhoto[gallery2]" title="CONFERENCE PARTY"  class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caption hovered back">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <h3 class="caption-title">FINDING NEW WAY EVENT</h3>
+                                                    <p class="caption-category">in Tokyo</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 isotope-item gallery">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <img src="assets/img/preview/latest-3a.jpg" alt="">
+                                        <div class="caption hovered">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <p class="caption-buttons">
+                                                        <a href="#" class="btn caption-zoom"><i class="fa fa-heart"></i></a>
+                                                        <a  href="assets/img/preview/latest-3.jpg"   rel="prettyPhoto[gallery2]" title="CONFERENCE PARTY" class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caption hovered back">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <h3 class="caption-title">PHP MEETING</h3>
+                                                    <p class="caption-category">in Foshan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 isotope-item photos gallery">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <img src="assets/img/preview/latest-4a.jpg" alt="">
+                                        <div class="caption hovered">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <p class="caption-buttons">
+                                                        <a href="#" class="btn caption-zoom"><i class="fa fa-heart"></i></a>
+                                                        <a  href="assets/img/preview/latest-4.jpg"   rel="prettyPhoto[gallery2]" title="CONFERENCE PARTY" class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caption hovered back">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <h3 class="caption-title">CONFERENCE PARTY</h3>
+                                                    <p class="caption-category">in Manhattan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 isotope-item photos videos">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <img src="assets/img/preview/latest-5a.jpg" alt="">
+                                        <div class="caption hovered">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <p class="caption-buttons">
+                                                        <a href="#" class="btn caption-zoom"><i class="fa fa-heart"></i></a>
+                                                        <a  href="assets/img/preview/latest-5.jpg"   rel="prettyPhoto[gallery2]" title="CONFERENCE PARTY" class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caption hovered back">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <h3 class="caption-title">WINNING AWARDS MEETING</h3>
+                                                    <p class="caption-category">in Istanbul</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 isotope-item videos gallery">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <img src="assets/img/preview/latest-6a.jpg" alt="">
+                                        <div class="caption hovered">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <p class="caption-buttons">
+                                                        <a href="#" class="btn caption-zoom"><i class="fa fa-heart"></i></a>
+                                                        <a  href="assets/img/preview/latest-6.jpg"   rel="prettyPhoto[gallery2]" title="CONFERENCE PARTY" class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caption hovered back">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <h3 class="caption-title">GALLERY IMAGE NAME</h3>
+                                                    <p class="caption-category">in Tokyo</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 isotope-item photos videos">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <img src="assets/img/preview/latest-7a.jpg" alt="">
+                                        <div class="caption hovered">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <p class="caption-buttons">
+                                                        <a href="#" class="btn caption-zoom"><i class="fa fa-heart"></i></a>
+                                                        <a  href="assets/img/preview/latest-7.jpg"   rel="prettyPhoto[gallery2]" title="CONFERENCE PARTY" class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caption hovered back">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <h3 class="caption-title">EVERYBODY HERE EVENT</h3>
+                                                    <p class="caption-category">in Foshan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 isotope-item gallery">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <img src="assets/img/preview/latest-8a.jpg" alt="">
+                                        <div class="caption hovered">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <p class="caption-buttons">
+                                                        <a href="#" class="btn caption-zoom"><i class="fa fa-heart"></i></a>
+                                                        <a  href="assets/img/preview/latest-8.jpg"   rel="prettyPhoto[gallery2]" title="CONFERENCE PARTY" class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caption hovered back">
+                                            <div class="caption-wrapper div-table">
+                                                <div class="caption-inner div-cell">
+                                                    <h3 class="caption-title">YOGA CLASS MET AT AUGUST</h3>
+                                                    <p class="caption-category">in Manhattan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="text-center margin-top">
+                            <a data-animation="flipInY" data-animation-delay="500" href="#" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-photo"></i> See All Gallery</a>
+                        </div>
+
+                    </div>
+                </section> --}}
+                <!-- /PAGE -->
+
+
+
+
+                
+                <!-- PAGE -->
+                {{-- <section class="page-section light">
+                    <div class="container">
+
+                        <div class="row thumbnails info-thumbs clear">
+                            <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="100">
+                                <div class="thumbnail no-border no-padding text-center">
+                                    <div class="rehex">
+                                        <div class="rehex-deg">
+                                            <div class="rehex-deg">
+                                                <div class="rehex-inner">
+                                                    <div class="caption-wrapper div-table">
+                                                        <div class="caption-inner div-cell">
+                                                            <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-calendar"></i></a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <h3 class="caption-title">7/24 Event avaliable</h3>
+                                        <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                        <p class="caption-more"><a href="#" class="btn btn-theme">Details</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- -->
+                            <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="300">
+                                <div class="thumbnail no-border no-padding text-center">
+                                    <div class="rehex">
+                                        <div class="rehex-deg">
+                                            <div class="rehex-deg">
+                                                <div class="rehex-inner">
+                                                    <div class="caption-wrapper div-table">
+                                                        <div class="caption-inner div-cell">
+                                                            <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-map-marker"></i></a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <h3 class="caption-title">Great Locations</h3>
+                                        <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                        <p class="caption-more"><a href="#" class="btn btn-theme">Details</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- -->
+                            <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="500">
+                                <div class="thumbnail no-border no-padding text-center">
+                                    <div class="rehex">
+                                        <div class="rehex-deg">
+                                            <div class="rehex-deg">
+                                                <div class="rehex-inner">
+                                                    <div class="caption-wrapper div-table">
+                                                        <div class="caption-inner div-cell">
+                                                            <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-users"></i></a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <h3 class="caption-title">More Then 200 Speakers</h3>
+                                        <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                        <p class="caption-more"><a href="#" class="btn btn-theme">Details</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- -->
+                            <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="700">
+                                <div class="thumbnail no-border no-padding text-center">
+                                    <div class="rehex">
+                                        <div class="rehex-deg">
+                                            <div class="rehex-deg">
+                                                <div class="rehex-inner">
+                                                    <div class="caption-wrapper div-table">
+                                                        <div class="caption-inner div-cell">
+                                                            <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-music"></i></a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <h3 class="caption-title">Lets Party After Event</h3>
+                                        <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                        <p class="caption-more"><a href="#" class="btn btn-theme">Details</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section> --}}
+                <!-- /PAGE -->

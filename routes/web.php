@@ -16,6 +16,15 @@ Route::get('/', 'WelcomeController@index')->name('index');
 Auth::routes();
 
 Route::get('/index', 'HomeController@index')->name('index');
+
+Route::get('event-hosts', function () {
+    return view('event-host');
+});
+
+Route::get('about-us', function () {
+    return view('about-us');
+});
+
 Route::resource('subscribe', 'SubscribeController');
 Route::resource('subscriber', 'SubscribersController');
 Route::resource('event', 'EventController');
