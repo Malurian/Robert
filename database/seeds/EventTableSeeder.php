@@ -18,7 +18,7 @@ class EventTableSeeder extends Seeder
         $event->user_id = 1;
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
-        $event->amount = 49.99
+        $event->amount = 49.99;
         $event->save();
 
         $event = new Event;
@@ -26,7 +26,7 @@ class EventTableSeeder extends Seeder
         $event->user_id = 1;
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
-        $event->amount = 99.99
+        $event->amount = 99.99;
         $event->save();
 
         $event = new Event;
@@ -34,7 +34,7 @@ class EventTableSeeder extends Seeder
         $event->user_id = 2;
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
-        $event->amount = 50
+        $event->amount = 50;
         $event->save();
 
     }

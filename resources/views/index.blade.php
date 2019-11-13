@@ -228,7 +228,7 @@
                                                     <div class="caption">
                                                         <h3 class="caption-title"><a href="#">{{$event->name}}</a></h3>
                                                         <p class="caption-category"><i class="fa fa-file-text-o"></i> {{$event->date}} on Manhattan / New York</p>
-                                                        <p class="caption-price">Tickets from R49,99</p>
+                                                        <p class="caption-price">Tickets from R{{$event->amount}}</p>
                                                         <p class="caption-text">{{$event->description}} </p>
                                                         <p class="caption-more">
                                                             <form method="POST" action="{{ url('subscribe') }}">
