@@ -32,6 +32,12 @@ class DashboardController extends Controller
         return view('dashboard/create-events');
     }
 
+    public function wallet()
+    {
+        // dd('create');
+        return view('dashboard/wallet');
+    }
+
     /**
      * Store a newly created resource in storage.
      *

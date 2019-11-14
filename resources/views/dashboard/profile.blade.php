@@ -22,7 +22,7 @@
 												<span class="fa fa-pencil" aria-hidden="true"></span>
 											</a>
 											<div class="profile-label mt-3">
-												<span> {{ auth()->user()->name }} </span>
+												<span class="text-uppercase "> {{ auth()->user()->name }} </span>
 											</div>
 
 											<div class="profile-stars">
@@ -75,7 +75,7 @@
 													<i class="fa fa-link" aria-hidden="true"></i>
 												</div>
 												<div class="media-body ml-5 ">
-													<h6 class="mediafont text-dark mb-0">Websites</h6><a class="d-block" href="">http://adminor.com</a> <a class="d-block" href="">http://adminor.net</a>
+													<h6 class="mediafont text-dark mb-0">Websites</h6><a class="d-block" href="">http://eventsponsors.com</a> <a class="d-block" href="">http://eventsponsors.net</a>
 												</div>
 												<!-- media-body -->
 											</div>
@@ -87,7 +87,7 @@
 													<i class="fa fa-envelope-o" aria-hidden="true"></i>
 												</div>
 												<div class="media-body ml-5">
-													<h6 class="mediafont text-dark mb-0">{{ auth()->user()->email }}</h6><a class="d-block" href="">georgemestayer@adminor.com</a>
+													<h6 class="mediafont text-dark mb-0">{{ auth()->user()->email }}</h6><a class="d-block" href="">georgemestayer@eventsponsors.com</a>
 												</div>
 												<!-- media-body -->
 											</div>
@@ -97,7 +97,7 @@
 													<i class="fa fa-twitter" aria-hidden="true"></i>
 												</div>
 												<div class="media-body ml-5">
-													<h6 class="mediafont text-dark mb-0">Twitter</h6><a class="d-block" href="#">@adminor</a>
+													<h6 class="mediafont text-dark mb-0">Twitter</h6><a class="d-block" href="#">@eventsponsors</a>
 												</div>
 												<!-- media-body -->
 											</div>
@@ -131,7 +131,7 @@
 														</tbody>
 														<tbody class="col-lg-6 p-0">
 															<tr>
-																<td><strong>Website :</strong> adminor.com</td>
+																<td><strong>Website :</strong> eventsponsors.com</td>
 															</tr>
 															<tr>
 																<td><strong>Email :</strong> {{ auth()->user()->email }}</td>

@@ -67,8 +67,8 @@
 										</div>
 										<div class="col-8">
 											<div class="card-body p-4">
-												<h1 class="mb-3">$485</h1>
-												<h5 class="font-weight-normal mb-0">Earnings</h5>
+												<h1 class="mb-3" style="color:brown">R{{ auth::user()->wallet }}</h1>
+												<h5 class="font-weight-normal mb-0">Wallet</h5>
 											</div>
 										</div>
 									</div>

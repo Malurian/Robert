@@ -63,14 +63,14 @@
                 <div class="top-line">
                         <div class="container">
                             <ul class="user-menu">
-                                <li><a href="{{ url('/dash') }}"  data-toggle="modal"><i class="fa fa-file-text-o"></i> Dashboard</a></li>
+                                <li><a href="{{ url('/dash') }}"  data-toggle="modal"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                                 <li><a href="{{ url('logout')}}" data-toggle="modal"><i class="fa fa-sign-out"></i> Logout</a></li>
                             </ul>
                             @guest
                             <div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div>
                             @else
-                            <div class="hot-line"><span><i class="fa fa-user"></i> <strong>Welcome: </strong></span>{{{ isset(Auth::user()->name) ? Auth::user()->email : Auth::user()->email }}}
-                            <span><i class="fa fa-credit-card"></i> <strong> Wallet: </strong></span>{{{ isset(Auth::user()->email) ? Auth::user()->email : Auth::user()->email }}}</div>
+                            <div class="hot-line"><span><i class="fa fa-user"></i> <strong>Welcome: </strong></span><span class="text-uppercase">{{{isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->name }}}</span>
+                            <span><i class="fa fa-credit-card"></i> <strong>| Wallet: </strong></span>R{{ auth::user()->wallet }}</div>
                             @endguest
                         </div>
                     </div>

@@ -34,6 +34,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('dash', 'DashboardController@index');
 Route::get('create-events', 'DashboardController@create');
+Route::get('wallet', 'DashboardController@wallet');
 
 Route::get('profile', 'UserController@index');
 

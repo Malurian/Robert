@@ -15,7 +15,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
 		<!-- Title -->
-		<title>adminor – Clean & Modern Responsive Bootstrap 4 admin dashboard HTML5 Template.</title>
+		<title>Event Sponsors - Manage your Events.</title>
 		<link rel="stylesheet" href="dashboard\assets\fonts\fonts\font-awesome.min.css">
 
 		<!-- Sidemenu Css -->
@@ -76,7 +76,7 @@
 												<i class="fa fa-thumbs-o-up"></i>
 											</div>
 											<div>
-												<strong>Someone likes our posts.</strong>
+												<strong>Someone subscribed to your event.</strong>
 												<div class="small text-muted">3 hours ago</div>
 											</div>
 										</a>
@@ -85,7 +85,7 @@
 												<i class="fa fa-commenting-o"></i>
 											</div>
 											<div>
-												<strong> 3 New Comments</strong>
+												<strong> 3 New subscribers</strong>
 												<div class="small text-muted">5  hour ago</div>
 											</div>
 										</a>
@@ -105,27 +105,27 @@
 								<div class="dropdown d-none d-md-flex">
 									<a class="nav-link icon text-center" data-toggle="dropdown">
 										<i class="icon icon-speech"></i>
-										<span class=" nav-unread badge badge-info badge-pill">2</span>
+										{{-- <span class=" nav-unread badge badge-info badge-pill">2</span> --}}
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 										<a href="#" class="dropdown-item text-center">2 New Messages</a>
 										<div class="dropdown-divider"></div>
 										<a href="#" class="dropdown-item d-flex pb-3">
-											<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="dashboard\assets/images/faces/male/41.jpg"></span>
+											<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="dashboard/assets/images/faces/male/41.jpeg"></span>
 											<div>
 												<strong>Madeleine</strong> Hey! there I' am available....
 												<div class="small text-muted">3 hours ago</div>
 											</div>
 										</a>
 										<a href="#" class="dropdown-item d-flex pb-3">
-											<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="dashboard\assets/images/faces/female/1.jpg"></span>
+											<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="dashboard/assets/images/faces/female/1.jpeg"></span>
 											<div>
 												<strong>Anthony</strong> New product Launching...
 												<div class="small text-muted">5  hour ago</div>
 											</div>
 										</a>
 										<a href="#" class="dropdown-item d-flex pb-3">
-											<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="dashboard\assets/images/faces/female/18.jpg"></span>
+											<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="dashboard/assets/images/faces/female/18.jpeg"></span>
 											<div>
 												<strong>Olivia</strong> New Schedule Realease......
 												<div class="small text-muted">45 mintues ago</div>
@@ -189,7 +189,7 @@
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
 										<div class="text-center">
-											<a href="#" class="dropdown-item text-center font-weight-sembold user" data-toggle="dropdown">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</a>
+											<a href="#" class="dropdown-item text-center font-weight-sembold user" data-toggle="dropdown"><strong>{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</strong></a>
 											<span class="text-center user-semi-title text-dark">User Title</span>
 											<div class="dropdown-divider"></div>
 										</div>
@@ -226,8 +226,8 @@
 							<div class="user-profile">
 								<div class="dropdown user-pro-body">
 									<div><img src="dashboard\assets\images\faces\female\25.jpeg" alt="user-img" class="img-circle"></div>
-									<div class="mb-2"><a href="#" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>  </a>
-									<br><span class="text-gray">{{{ isset(Auth::user()->email) ? Auth::user()->email : Auth::user()->email }}}</span>
+									<div class="mb-2"><a href="#" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">Hi</span> <span class="text-uppercase font-weight-semibold">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>  </a>
+									<br><span class="text-gray">Your Wallet: R{{ auth::user()->wallet }}</span>
 									</div>
 								</div>
 							</div>
@@ -255,11 +255,14 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#pageSubmenu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false"><i class="fa fa-area-chart mr-2"></i> Payment Methods</a>
+								<a href="#pageSubmenu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false"><i class="fa fa-area-chart mr-2"></i>Wallet/Payment Methods</a>
 								<ul class="collapse list-unstyled" id="pageSubmenu" data-parent="#accordion">
 									<li>
-										<a href="#">Paypal </a>
+									<a href="{{ url('wallet') }}">Add to Wallet </a>
 									</li>
+									<li>
+										<a href="#">Stripe</a>
+									</li>									
 									<li>
 										<a href="#">Stripe</a>
 									</li>
