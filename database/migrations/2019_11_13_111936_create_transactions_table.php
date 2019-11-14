@@ -14,7 +14,6 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->double('wallet', 12, 2)->nullable()->default(0.00);
             $table->bigIncrements('id');
             $table->timestamps();
         });
