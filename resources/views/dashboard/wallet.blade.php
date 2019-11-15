@@ -10,8 +10,8 @@
 							</ol>
 						</div>
 						<div class="row row-deck">
-							<div class="col-lg">
-								<form method="post" action="" enctype="multipart/form-data" class="card">
+							<div class="col-lg">								
+								<form method="POST" action="{{ url('pay') }}" class="card">
 										{!! csrf_field() !!}
 									<div class="card-header">
 										<h3 class="card-title">Current Wallet Balance: <span style="color:crimson">R{{ auth::user()->wallet }}</span></h3>
@@ -29,6 +29,7 @@
 										</div>
 									</div>
 								</form>
+
 							</div>
 						</div>
 						

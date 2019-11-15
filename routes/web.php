@@ -35,6 +35,8 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('dash', 'DashboardController@index');
 Route::get('create-events', 'DashboardController@create');
 Route::get('wallet', 'DashboardController@wallet');
+Route::post('pay', 'PaymentController@pay');
+// Route::get('payment', 'PaymentController');
 
 Route::get('profile', 'UserController@index');
 
