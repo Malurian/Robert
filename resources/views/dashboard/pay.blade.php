@@ -26,7 +26,9 @@
 										data-locale="auto"
 										data-currency="usd">
 									</script>
-								</form>
+								<input type="hidden" name="amount" value="{{ $amount.'00' }}">
+								<input type="hidden" name="description" value="Event Payment">	
+							</form>
 							</div>
 						</div>
 						

@@ -36,7 +36,7 @@ Route::get('dash', 'DashboardController@index');
 Route::get('create-events', 'DashboardController@create');
 Route::get('wallet', 'DashboardController@wallet');
 Route::post('pay', 'PaymentController@pay');
-// Route::get('payment', 'PaymentController');
+Route::post('payment', 'PaymentController@store');
 
 Route::get('profile', 'UserController@index');
 

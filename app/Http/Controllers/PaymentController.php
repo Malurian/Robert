@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 // use Cartalyst\Stripe\Stripe;
-// use Stripe\Stripe;
-// use Stripe\Charge;
+use Stripe\Stripe;
+use Stripe\Charge;
 
 class PaymentController extends Controller
 {
@@ -43,13 +43,13 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        // Stripe::setApiKey('sk_test_7sZPXRirATqMnB7Aosk54FU900UsPQgBFW');
-        // $charge = Charge::create([
-        //     'amount' => 1000,
-        //     'currency' => 'usd',
-        //     'description' => 'Test Book',
-        //     'source' => $request->token,
-        // ]);
+        Stripe::setApiKey('sk_test_7sZPXRirATqMnB7Aosk54FU900UsPQgBFW');
+        $charge = Charge::create([
+            'amount' => $request->amount,
+            'currency' => 'usd',
+            'description' => 'Test Book',
+            'source' => $request->stripeToken,
+        ]);
 
         // $stripe = new Stripe('sk_test_7sZPXRirATqMnB7Aosk54FU900UsPQgBFW');
         // $stripe = Stripe::make('sk_test_7sZPXRirATqMnB7Aosk54FU900UsPQgBFW');
@@ -71,6 +71,8 @@ class PaymentController extends Controller
         // ]);
         
         // dd($charge['id']);
+        $message = 'Payment Successfully';
+        return view('success', compact('message'));
     }
 
     /**
