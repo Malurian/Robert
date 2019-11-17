@@ -70,7 +70,7 @@ class PaymentController extends Controller
         //     'amount'   => 50.49,
         // ]);
         
-        // dd($charge['id']);
+        // dd('hello');
         $message = 'Payment Successfully';
         return view('success', compact('message'));
     }

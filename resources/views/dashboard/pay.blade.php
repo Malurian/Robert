@@ -15,7 +15,8 @@
 								<div>
 									<h3><span style="color:crimson">Amount To Pay: R{{ $amount }}</span></h3>
 								</div>
-							<form action="{{ url('payment') }}" method="POST">
+							<form action="{{ url('payment_now') }}" method="POST">
+								{!! csrf_field() !!}	
 									<script
 										src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 										data-key="pk_test_4qkEqxcXNlTdQqJ6oU6BtpaD00rxZambCs"
@@ -31,6 +32,6 @@
 							</form>
 							</div>
 						</div>
-						
+
 					</div>
 					@endsection
