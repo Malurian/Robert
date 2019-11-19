@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_admin')->default(false);
             $table->string('password');
             $table->double('wallet', 12, 2)->nullable()->default(0.00);
+            $table->enum('user_type', ['host', 'sponsor'])->nullable()->default('host');
             $table->rememberToken();
             $table->timestamps();
         });
