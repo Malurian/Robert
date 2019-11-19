@@ -15,20 +15,20 @@
         <link rel="shortcut icon" href="assets/img/logo.jpeg">
 
         <!-- CSS Global -->
-        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/plugins/bootstrap-rtl-master/dist/css/bootstrap-rtl.min.css" rel="stylesheet">
-        <link href="assets/plugins/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet">
-        <link href="assets/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="{{ URL::asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('assets/plugins/bootstrap-rtl-master/dist/css/bootstrap-rtl.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/jquery-ui-1.11.4.custom/jquery-ui.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ URL::asset('assets/plugins/prettyphoto/css/prettyPhoto.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet">
 
-        <link href="assets/plugins/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="assets/plugins/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet">        
-        <link href="assets/plugins/animate/animate.min.css" rel="stylesheet">
-        <link href="assets/plugins/countdown/jquery.countdown.css" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/owlcarousel2/assets/owl.carousel.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/owlcarousel2/assets/owl.theme.default.min.css') }}" rel="stylesheet">        
+        <link href="{{ URL::asset('assets/plugins/animate/animate.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/countdown/jquery.countdown.css') }}" rel="stylesheet">
 
-        <link href="assets/css/theme.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet">
+        <link href="{{ URL::asset('assets/css/theme.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/css/custom.css') }}" rel="stylesheet">
 
         <!--[if lt IE 9]>
         <script src="assets/plugins/iesupport/html5shiv.js"></script>
@@ -147,115 +147,6 @@
             </footer>
             <!-- /FOOTER -->
 
-            <div class="to-top"><i class="fa fa-angle-up"></i></div>
-
-
-        </div>
-        <!-- Popup: Login -->
-        <div class="modal fade login-register" id="popup-login" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg" id="main-slider">                 
-                <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="form-background">
-                    <div class="col-sm-6 popup-form">
-                        <div class="form-header color">
-                            <h1 class="section-title">
-                                <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
-                                <span class="title-inner">Login</span>
-                            </h1>
-                        </div>
-                        <form method="post" action="{{ route('login') }}" class="registration-form alt" name="registration-form-alt" id="registration-form-alt">
-                            @csrf
-                            <div class="row">
-                                <div class="col-sm-12 form-alert"></div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="email" placeholder="Enter Email" title="" data-toggle="tooltip" class="form-control input-name  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus data-original-title="Name is required">
-                                    </div>
-                                    @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="password"  placeholder="Password"  title="" data-toggle="tooltip" class="form-control input-password @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" data-original-title="Password">
-                                    </div>
-                                    
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                                </div>                                  
-                                <div class="col-sm-12">
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-theme btn-block submit-button" data-animation-delay="100" data-animation="flipInY"> Log in <i class="fa fa-arrow-circle-left"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>     
-                        <div class="form-footer color">
-                            <a href="#" class="popup-password"> Lost your password?</a>                        
-                        </div>
-                    </div> 
-
-                    <div class="popup-form col-sm-6">
-                        <div class="form-header color">
-                            <h1 class="section-title">
-                                <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
-                                <span class="title-inner">Register</span>
-                            </h1>
-                        </div>
-                        <form method="post" action="{{ route('register') }}" class="registration-form alt" name="registration-form-alt" id="registration-form-alt">
-                            @csrf
-                            <div class="row">
-                                <div class="col-sm-12 form-alert"></div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="User Name" title="" data-toggle="tooltip" class="form-control input-name @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus data-original-title="Name is required">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="text"  placeholder="E-mail"  title="" data-toggle="tooltip" class="form-control input-password @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" data-original-title="Password">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group selectpicker-wrapper">
-                                        <select
-                                                class="selectpicker input-price" data-live-search="true" data-width="100%"
-                                                data-toggle="tooltip" title="Select Your Price Tab">
-                                            <option>Select Your Price Tab</option>
-                                            <option>$100</option>
-                                            <option>$200</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="password"  placeholder="Password"  title="" data-toggle="tooltip" class="form-control input-password @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" data-original-title="Password">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="password"  placeholder="Password"  title="" data-toggle="tooltip" class="form-control input-password" name="password_confirmation" required autocomplete="new-password" data-original-title="Password">
-                                    </div>
-                                </div>                                  
-                                <div class="col-sm-12">
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-theme btn-block submit-button" data-animation-delay="100" data-animation="flipInY"> Register Now <i class="fa fa-arrow-circle-left"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>                         
-                    </div> 
-
-                </div>
-            </div>
-
-        </div>
-        <!-- /Popup: Login -->
 
 
 
@@ -265,82 +156,31 @@
 
     <!--[if lt IE 9]><script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script><![endif]-->
     
-    <script src="assets/plugins/jquery/jquery-2.1.1.min.js"></script>
-    <script src="assets/plugins/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
-    <script src="assets/plugins/modernizr.custom.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="assets/plugins/superfish/js/superfish.js"></script>
-    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
-    <script src="assets/plugins/placeholdem.min.js"></script>
-    <script src="assets/plugins/jquery.smoothscroll.min.js"></script>
-    <script src="assets/plugins/jquery.easing.min.js"></script>
-    <script src="assets/plugins/smooth-scrollbar.min.js"></script>
+    <script src="{{ URL::asset('assets/plugins/jquery/jquery-2.1.1.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/jquery-ui-1.11.4.custom/jquery-ui.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/modernizr.custom.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/bootstrap-select/bootstrap-select.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/superfish/js/superfish.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/prettyphoto/js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/placeholdem.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/jquery.smoothscroll.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/jquery.easing.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/smooth-scrollbar.min.js') }}"></script>
 
     <!-- JS Page Level -->
-    <script src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
-    <script src="assets/plugins/waypoints/waypoints.min.js"></script>
-    <script src="assets/plugins/countdown/jquery.plugin.min.js"></script>
-    <script src="assets/plugins/countdown/jquery.countdown.min.js"></script>
-    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="{{ URL::asset('assets/plugins/owlcarousel2/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/countdown/jquery.plugin.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/countdown/jquery.countdown.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/isotope/jquery.isotope.min.js') }}"></script>
+    <script src="{{ URL::asset('https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false') }}"></script>
 
     <!--<script src="assets/js/theme-ajax-mail.js"></script>-->
-    <script src="assets/js/theme.js"></script>
+    <script src="{{ URL::asset('assets/js/theme.js') }}"></script>
     
 
 
-    <script type="text/javascript">
-        "use strict";
-        jQuery(document).ready(function () {
-            theme.init();
-            theme.initMainSlider();
-            theme.initCountDown();
-            theme.initPartnerSlider();
-            theme.initTestimonials();
-            theme.initCorouselSlider4();
-            theme.initCorouselSlider3();
-            theme.initGoogleMap();
-        });
-        jQuery(window).load(function () {
-            theme.initAnimation();
-        });
-
-        jQuery(window).load(function () {
-            jQuery('body').scrollspy({offset: 100, target: '.navigation'});
-        });
-        jQuery(window).load(function () {
-            jQuery('body').scrollspy('refresh');
-        });
-        jQuery(window).resize(function () {
-            jQuery('body').scrollspy('refresh');
-        });
-
-        jQuery(document).ready(function () {
-            theme.onResize();
-        });
-        jQuery(window).load(function () {
-            theme.onResize();
-        });
-        jQuery(window).resize(function () {
-            theme.onResize();
-        });
-
-        jQuery(window).load(function () {
-            if (location.hash != '') {
-                var hash = '#' + window.location.hash.substr(1);
-                if (hash.length) {
-                    jQuery('html,body').delay(0).animate({
-                        scrollTop: jQuery(hash).offset().top - 44 + 'px'
-                    }, {
-                        duration: 1200,
-                        easing: "easeInOutExpo"
-                    });
-                }
-            }
-        });
-
-    </script>
-
+   
 </body>
 </html>
