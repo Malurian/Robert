@@ -212,16 +212,6 @@
                             <div class="row">
                                 <div class="col-sm-12 form-alert"></div>
                                 <div class="col-sm-12">
-                                    <div class="form-group selectpicker-wrapper">
-                                        <select
-                                                class="selectpicker input-price" data-live-search="true" data-width="100%"
-                                                data-toggle="tooltip" title="Choose Your Account Type" name="user_type">
-                                            <option>Become a Host</option>
-                                            <option>Become a Sponsor</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="text" placeholder="User Name" title="" data-toggle="tooltip" class="form-control input-name @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus data-original-title="Name is required">
                                     </div>
@@ -229,6 +219,17 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="text"  placeholder="E-mail"  title="" data-toggle="tooltip" class="form-control input-password @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" data-original-title="Password">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group selectpicker-wrapper">
+                                        <select
+                                                class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                data-toggle="tooltip" title="Select Your Price Tab">
+                                            <option>Select Your Price Tab</option>
+                                            <option>$100</option>
+                                            <option>$200</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">

@@ -16,6 +16,7 @@
                                             <div class="div-table">
                                                 <div class="div-cell">
                                                     <p class="text-center avatar"><img src="assets/img/preview/slider-4-avatar.png" style="width: auto;" alt=""/></p>
+                                                    <h2 data-animation="fadeInDown" data-animation-delay="100"><span>Adverts Here</span></h2>
                                                     <h2 data-animation="fadeInDown" data-animation-delay="100"><span>15 October at 20:00 - 22:00</span></h2>
                                                     <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300">PHP Conference ın Manhattan</h3>
                                                     <div class="countdown-wrapper">
@@ -98,14 +99,16 @@
                     <div class="container">
 
                         <div class="clear clearfix overflowed">
+                            
+                                <h2 class="theme-color" ><strong><span>Featured Events</span></strong></h2>
                             <div class="section-title pull-right" style="width: auto;">
                                 <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-star fa-stack-1x"></i></span></span>
                             </div>
                             <ul id="filtrable-events" class="filtrable clearfix">
                                 <li class="all"><a href="#" data-filter="*">All</a></li>
-                                <li class="festival current"><a href="#" data-filter=".festival">Festival</a></li>
-                                <li class="playground"><a href="#" data-filter=".playground">Playground</a></li>
-                                <li class="conferance"><a href="#" data-filter=".conference">Conference</a></li>
+                                <li class="festival current"><a href="#" data-filter=".festival">Festivals</a></li>
+                                <li class="playground"><a href="#" data-filter=".playground">Occasions</a></li>
+                                <li class="conferance"><a href="#" data-filter=".conference">Conferences</a></li>
                             </ul>
                         </div>
 
@@ -378,6 +381,84 @@
                     </div>
                 </section>
                 <!-- /PAGE -->
+
+
+                <!-- PAGE -->
+                <section class="page-section">
+                        <div class="container">
+    
+                            <div class="clear clearfix overflowed">
+                                
+                                    <h2 class="theme-color" ><strong><span>Upcoming Events</span></strong></h2>
+                                <div class="section-title pull-right" style="width: auto;">
+                                    <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-star fa-stack-1x"></i></span></span>
+                                </div>
+                                <ul id="filtrable-events" class="filtrable clearfix">
+                                    <li class="all"><a href="#" data-filter="*">All</a></li>
+                                    <li class="festival current"><a href="#" data-filter=".festival">Festivals</a></li>
+                                    <li class="playground"><a href="#" data-filter=".playground">Occasions</a></li>
+                                    <li class="conferance"><a href="#" data-filter=".conference">Conferences</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="row thumbnails events vertical isotope isotope-items">
+    
+                                @forelse ($events as $event)                                
+                                    <div class="col-md-6 col-sm-6 isotope-item festival">
+                                            <div class="thumbnail no-border no-padding">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="media">
+                                                            <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                                            <img src="{{ asset('/images/'. $event->image ) }}" alt="">
+                                                            <div class="caption hovered"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="caption">
+                                                            <h3 class="caption-title"><a href="#">{{$event->name}}</a></h3>
+                                                            <p class="caption-category"><i class="fa fa-file-text-o"></i> {{$event->date}} on Manhattan / New York</p>
+                                                            <p class="caption-price">Tickets from R{{$event->amount}}</p>
+                                                            <p class="caption-text">{{$event->description}} </p>
+                                                            <p class="caption-more">
+                                                                <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Subscribe</a>
+                                                                {{-- 
+                                                                <form method="POST" action="{{ url('subscribe') }}">
+                                                                    <input type="hidden" name="event_id" value="{{ $event->id }}">
+                                                                    {!! csrf_field() !!}
+                                                                    <button type="submit" class="btn btn-theme">
+                                                                        Subscribe
+                                                                    </button>
+                                                                </form> 
+                                                                --}}
+    
+                                                            </p>
+                                                            <p class="caption-more">
+                                                                <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Event Details</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                               @empty
+                                   no events
+                               @endforelse
+    
+                                
+    
+                                
+                            </div>
+    
+                            <div class="text-center margin-top">
+                                <a data-animation="fadeInUp" data-animation-delay="100" href="#" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-file-text-o"></i> See all events</a>
+                            </div>
+    
+                        </div>
+                    </section>
+                    <!-- /PAGE -->
+    
+    
 
                 <!-- PAGE -->
                 <section class="page-section color">
