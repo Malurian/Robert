@@ -3,7 +3,14 @@
 @section('content')
 					<div class=" content-area">
 						<div class="page-header">
-							<h4 class="page-title">Dashboard</h4>
+							
+								@if ((Auth::user()->user_type)  == 'host')	   
+								<h4 class="page-title">Dashboard for Hosts</h4>
+								@else 
+								<h4 class="page-title">Dashboard for Sponsors</h4>
+								@endif
+							
+						
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Dashboard</li>

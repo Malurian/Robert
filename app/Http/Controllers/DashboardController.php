@@ -32,6 +32,36 @@ class DashboardController extends Controller
         return view('dashboard/create-events');
     }
 
+    public function sponsorship()
+    {
+        // dd('create');
+        return view('dashboard/purchase-sponsorship');
+    }
+
+    public function artworks()
+    {
+        // dd('create');
+        return view('dashboard/send-artworks');
+    }
+
+    public function extras()
+    {
+        // dd('create');
+        return view('dashboard/extras');
+    }
+
+    public function social()
+    {
+        // dd('create');
+        return view('dashboard/boost-social');
+    }
+
+    public function featured()
+    {
+        // dd('create');
+        return view('dashboard/boost-featured');
+    }
+
     public function wallet()
     {
         // dd('create');

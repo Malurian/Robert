@@ -3,13 +3,13 @@
 @section('content')
 					<div class=" content-area">
 						<div class="page-header">
-							<h4 class="page-title">Create an Event</h4>
+							<h4 class="page-title">Add Extras/Freebies</h4>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Create an Event</li>
+								<li class="breadcrumb-item active" aria-current="page">Extras</li>
 							</ol>
 						</div>
-						<div class="row row-deck">
+						{{-- <div class="row row-deck">
 							<div class="col-lg">
 								<form method="post" action="{{ url('event') }}" enctype="multipart/form-data" class="card">
 										{!! csrf_field() !!}
@@ -73,7 +73,7 @@
 									</div>
 								</form>
 							</div>
-						</div>
+						</div> --}}
 						
 					</div>
 					@endsection

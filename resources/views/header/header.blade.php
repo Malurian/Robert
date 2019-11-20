@@ -216,8 +216,8 @@
                                         <select
                                                 class="selectpicker input-price" data-live-search="true" data-width="100%"
                                                 data-toggle="tooltip" title="Choose Your Account Type" name="user_type">
-                                            <option>Become a Host</option>
-                                            <option>Become a Sponsor</option>
+                                            <option value="host">Become a Host</option>
+                                            <option value="sponsor">Become a Sponsor</option>
                                         </select>
                                     </div>
                                 </div>
@@ -230,6 +230,9 @@
                                     <div class="form-group">
                                         <input type="text"  placeholder="E-mail"  title="" data-toggle="tooltip" class="form-control input-password @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" data-original-title="Password">
                                     </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <p>Password must be 8 characters</p>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
