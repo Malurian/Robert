@@ -34,6 +34,11 @@
 											</div>
 										</div>										
 										<div class="form-group">
+												<label class="form-label">Cost</label>
+												<input type="text" class="form-control" name="amount" placeholder="Text..">
+											</div>
+										<div class="form-group">										
+										<div class="form-group">
 												<label class="form-label">Quantity Available</label>
 												<input type="text" class="form-control" name="quantity" placeholder="Text..">
 											</div>
