@@ -9,71 +9,46 @@
 								<li class="breadcrumb-item active" aria-current="page">Boost to Featured Events</li>
 							</ol>
 						</div>
-						{{-- <div class="row row-deck">
-							<div class="col-lg">
-								<form method="post" action="{{ url('event') }}" enctype="multipart/form-data" class="card">
-										{!! csrf_field() !!}
+						
+
+
+						<div class="col-lg-12 col-xl-8 col-md-12">
+								<div class="card ">
 									<div class="card-header">
-										<h3 class="card-title">Event elements</h3>
+										<h5 class="card-title">Boost for Featured Events</h5>
 									</div>
 									<div class="card-body">
-										<div class="form-group">
-											<label class="form-label">Event Title</label>
-											<input type="text" class="form-control" name="name" placeholder="Event Name">
-										</div>
-                                        
-                                        <label>Event Time:</label>
-										<div class="wd-150 mg-b-30">
-											<div class="input-group">
-												<div class="input-group-prepend">
-													<div class="input-group-text">
-														<i class="fa fa-clock-o tx-16 lh-0 op-6"></i>
-													</div>
-												</div><!-- input-group-prepend -->
-												<input class="form-control" id="tpBasic" placeholder="Set time" type="text">
-											</div>
-										</div>										
-										<div class="form-group">
-												<label class="form-label">Quantity Available</label>
-												<input type="text" class="form-control" name="quantity" placeholder="Text..">
-											</div>
-										<div class="form-group">
-											<label class="form-label">Event Description <span class="form-label-small ml-3">56/100</span></label>
-											<textarea class="form-control" name="description" rows="7" placeholder="Description"></textarea>
-										</div>
-
-										<div class="form-group">
-											<label class="form-label">Location</label>
-												<input type="text" class="form-control" name="address" placeholder="Event Location">	
-										</div>
-										<div class="form-group ">
-											<label class="form-label">Date of Event</label>
-												<input type="date" class="form-control" name="date" placeholder="Event Date">
-										
-                                        </div>
-                                        <div class="card-header">
-                                            <h3 class="card-title">Event Image</h3>
-                                        </div>
-                                        <div class=" card-body">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-sm-12">
-                                                    <input type="file" class="dropify" name="image" data-height="180">
-                                                </div>
-                                            </div>
-                                        </div>
-										<div class="form-group ">
-											<label class="form-label">Listing an event costs R600</label>										
-                                        </div>
-									</div>
-									<div class="card-footer text-right">
-										<div class="d-flex">
-											<a href="javascript:void(0)" class="btn btn-link">Cancel</a>
-											<button type="submit" class="btn btn-primary ml-auto">Proceed</button>
+										<div class="table-responsive">
+											<table class="table table-striped card-table table-condensed mt-0 table-nowrap border">
+												<thead>
+													<tr>
+														<th>Event Name</th>
+														<th>Date registered</th>
+														<th>Event Date</th>
+														<th>Location</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													@foreach ($my_subscribed_events as $event)
+														<tr>
+															<td>{{ $event->event->name }}</td>
+															<td>2019/08/17</td>
+															<td>Staff</td>
+															<td>2019/11/30</td>
+															<td><span class="badge badge-success">Inactive</span></td>
+														</tr>
+													@endforeach
+													
+												</tbody>
+											</table>
 										</div>
 									</div>
-								</form>
+									<div class="card-footer text-center">
+										<a href="#"><i class="fa fa-angle-down"></i> View More</a>
+									</div>
+								</div>
 							</div>
-						</div> --}}
 						
 					</div>
 					@endsection
