@@ -58,6 +58,14 @@ class DashboardController extends Controller
         return view('dashboard/boost-social', compact('my_created_events','my_subscribed_events'));
     }
 
+    public function form()
+    {
+        // dd('create');
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();        
+        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();       
+        return view('dashboard/boost-form', compact('my_created_events','my_subscribed_events'));
+    }
+
     public function featured()
     {
         // dd('create');

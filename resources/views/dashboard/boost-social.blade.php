@@ -36,7 +36,7 @@
 															<td>Staff</td>
 															<td>2019/11/30</td>
 															<td><span class="badge badge-success">
-																<a href="">Boost</a>
+															<a href="{{ url('boost-form') }}">Boost</a>
 																</span></td>
 														</tr>
 													@endforeach

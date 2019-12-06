@@ -149,7 +149,7 @@
 															<td>2019/08/17</td>
 															<td>Staff</td>
 															<td>2019/11/30</td>
-															<td><span class="badge badge-success">Inactive</span></td>
+															<td><span class="badge badge-success">Active</span></td>
 														</tr>
 													@endforeach
 													
@@ -187,7 +187,7 @@
 															<td>2019/08/17</td>
 															<td>Staff</td>
 															<td>2019/11/30</td>
-															<td><span class="badge badge-success">Inactive</span></td>
+															<td><span class="badge badge-success">Active</span></td>
 														</tr>
 													@endforeach
 													

@@ -38,6 +38,7 @@ Route::get('purchase-sponsorship', 'DashboardController@sponsorship');
 Route::get('send-artworks', 'DashboardController@artworks');
 Route::get('extras', 'DashboardController@extras');
 Route::get('boost-social', 'DashboardController@social');
+Route::get('boost-form', 'DashboardController@form');
 Route::get('boost-featured', 'DashboardController@featured');
 Route::get('wallet', 'DashboardController@wallet');
 Route::post('pay', 'PaymentController@pay');

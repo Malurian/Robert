@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div class="text-center margin-top">
-                <a href="#" class="btn btn-theme"><i class="fa fa-thumbs-up"></i> Become a sponsor</a>
+            <a href="{{ url('register') }}" class="btn btn-theme"><i class="fa fa-thumbs-up"></i> Become a sponsor</a>
             </div>
 
             
