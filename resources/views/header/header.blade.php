@@ -11,28 +11,28 @@
         <title>Event Sponsors</title>
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="shortcut icon" href="assets/img/logo.jpeg">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ URL::asset('assets/ico/apple-touch-icon-144-precomposed.png') }}">
+        <link rel="shortcut icon" href="{{ URL::asset('"assets/img/logo.jpeg') }}">
 
         <!-- CSS Global -->
-        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/plugins/bootstrap-rtl-master/dist/css/bootstrap-rtl.min.css" rel="stylesheet">
-        <link href="assets/plugins/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet">
-        <link href="assets/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/bootstrap-rtl-master/dist/css/bootstrap-rtl.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/jquery-ui-1.11.4.custom/jquery-ui.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ URL::asset('assets/plugins/prettyphoto/css/prettyPhoto.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet">
 
-        <link href="assets/plugins/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="assets/plugins/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet">        
-        <link href="assets/plugins/animate/animate.min.css" rel="stylesheet">
-        <link href="assets/plugins/countdown/jquery.countdown.css" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/owlcarousel2/assets/owl.carousel.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/owlcarousel2/assets/owl.theme.default.min.css') }}" rel="stylesheet">        
+        <link href="{{ URL::asset('assets/plugins/animate/animate.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/plugins/countdown/jquery.countdown.css') }}" rel="stylesheet">
 
-        <link href="assets/css/theme.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet">
+        <link href="{{ URL::asset('assets/css/theme.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('assets/css/custom.css') }}" rel="stylesheet">
 
         <!--[if lt IE 9]>
-        <script src="assets/plugins/iesupport/html5shiv.js"></script>
-        <script src="assets/plugins/iesupport/respond.min.js"></script>
+        <script src="{{ URL::asset('assets/plugins/iesupport/html5shiv.js') }}"></script>
+        <script src="{{ URL::asset('assets/plugins/iesupport/respond.min.js') }}"></script>
         <![endif]-->
     </head>
     <body id="home" class="wide body-light multipage">
@@ -83,7 +83,7 @@
                         <!-- Logo -->
                         <div class="logo">
                         <a href="{{ url('/') }}" class="scroll-to">
-                                    <img src="assets/img/logo.jpeg" style="width: 60px;" alt=""/>
+                                    <img src="{{ URL::asset('assets/img/logo.jpeg') }}" style="width: 60px;" alt=""/>
                                 Event Sponsors
                             </a>
                         </div>
@@ -114,7 +114,7 @@
                                     </form>
                                 </li>
                                 <li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
+                                <li><a href="{{ route('register') }}" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
                             </ul>
                         </nav>
                         <!-- /Navigation -->
@@ -212,25 +212,63 @@
                             <div class="row">
                                 <div class="col-sm-12 form-alert"></div>
                                 <div class="col-sm-12">
+                                    <div class="form-group selectpicker-wrapper">
+                                        <select
+                                                class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                data-toggle="tooltip" title="Choose Your Account Type" name="user_type">
+                                            <option value="host">Become a Host</option>
+                                            <option value="sponsor">Become a Sponsor</option>
+                                        </select>
+                                    </div>
+                                    @error('user_type')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="text" placeholder="User Name" title="" data-toggle="tooltip" class="form-control input-name @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus data-original-title="Name is required">
                                     </div>
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="text"  placeholder="E-mail"  title="" data-toggle="tooltip" class="form-control input-password @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" data-original-title="Password">
                                     </div>
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-12">
+                                    <p class="caption-text">Password must be 8 characters</p>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="password"  placeholder="Password"  title="" data-toggle="tooltip" class="form-control input-password @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" data-original-title="Password">
-                                    </div>
+                                    </div>                                
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="password"  placeholder="Password"  title="" data-toggle="tooltip" class="form-control input-password" name="password_confirmation" required autocomplete="new-password" data-original-title="Password">
                                     </div>
-                                </div>                                  
+                                    @error('password_confirmation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror  
+                                </div>                                
                                 <div class="col-sm-12">
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-theme btn-block submit-button" data-animation-delay="100" data-animation="flipInY"> Register Now <i class="fa fa-arrow-circle-left"></i></button>
@@ -252,30 +290,30 @@
 
     <!-- JS Global -->
 
-    <!--[if lt IE 9]><script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="{{ URL::asset('assets/plugins/jquery/jquery-1.11.1.min.js') }}"></script><![endif]-->
     
-    <script src="assets/plugins/jquery/jquery-2.1.1.min.js"></script>
-    <script src="assets/plugins/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
-    <script src="assets/plugins/modernizr.custom.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="assets/plugins/superfish/js/superfish.js"></script>
-    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
-    <script src="assets/plugins/placeholdem.min.js"></script>
-    <script src="assets/plugins/jquery.smoothscroll.min.js"></script>
-    <script src="assets/plugins/jquery.easing.min.js"></script>
-    <script src="assets/plugins/smooth-scrollbar.min.js"></script>
+    <script src="{{ URL::asset('assets/plugins/jquery/jquery-2.1.1.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/jquery-ui-1.11.4.custom/jquery-ui.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/modernizr.custom.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/bootstrap-select/bootstrap-select.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/superfish/js/superfish.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/prettyphoto/js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/placeholdem.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/jquery.smoothscroll.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/jquery.easing.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/smooth-scrollbar.min.js') }}"></script>
 
     <!-- JS Page Level -->
-    <script src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
-    <script src="assets/plugins/waypoints/waypoints.min.js"></script>
-    <script src="assets/plugins/countdown/jquery.plugin.min.js"></script>
-    <script src="assets/plugins/countdown/jquery.countdown.min.js"></script>
-    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="{{ URL::asset('assets/plugins/owlcarousel2/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/countdown/jquery.plugin.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/countdown/jquery.countdown.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/isotope/jquery.isotope.min.js') }}"></script>
+    <script src="{{ URL::asset('https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false') }}"></script>
 
-    <!--<script src="assets/js/theme-ajax-mail.js"></script>-->
-    <script src="assets/js/theme.js"></script>
+    <!--<script src="{{ URL::asset('assets/js/theme-ajax-mail.js') }}"></script>-->
+    <script src="{{ URL::asset('assets/js/theme.js') }}"></script>
     
 
 
@@ -330,6 +368,60 @@
         });
 
     </script>
+
+    
+<script type="text/javascript">
+    "use strict";
+    jQuery(document).ready(function () {
+        theme.init();
+        theme.initMainSlider();
+        theme.initCountDown();
+        theme.initPartnerSlider2();
+        theme.initImageCarousel();
+        theme.initCorouselSlider4();
+        theme.initCorouselSlider3();
+        theme.initTestimonials();
+        theme.initGoogleMap();
+    });
+    jQuery(window).load(function () {
+        theme.initAnimation();
+    });
+
+    jQuery(window).load(function () {
+        jQuery('body').scrollspy({offset: 100, target: '.navigation'});
+    });
+    jQuery(window).load(function () {
+        jQuery('body').scrollspy('refresh');
+    });
+    jQuery(window).resize(function () {
+        jQuery('body').scrollspy('refresh');
+    });
+
+    jQuery(document).ready(function () {
+        theme.onResize();
+    });
+    jQuery(window).load(function () {
+        theme.onResize();
+    });
+    jQuery(window).resize(function () {
+        theme.onResize();
+    });
+
+    jQuery(window).load(function () {
+        if (location.hash != '') {
+            var hash = '#' + window.location.hash.substr(1);
+            if (hash.length) {
+                jQuery('html,body').delay(0).animate({
+                    scrollTop: jQuery(hash).offset().top - 44 + 'px'
+                }, {
+                    duration: 1200,
+                    easing: "easeInOutExpo"
+                });
+            }
+        }
+    });
+
+</script>
 
 </body>
 </html>

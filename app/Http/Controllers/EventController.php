@@ -28,6 +28,7 @@ class EventController extends Controller
     {
         $events = Event::get();
         return view('view-events', compact('events'));
+
     }
 
     /**

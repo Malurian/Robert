@@ -32,6 +32,40 @@ class DashboardController extends Controller
         return view('dashboard/create-events');
     }
 
+    public function sponsorship()
+    {
+        // dd('create');
+        return view('dashboard/purchase-sponsorship');
+    }
+
+    public function artworks()
+    {
+        // dd('create');
+        return view('dashboard/send-artworks');
+    }
+
+    public function extras()
+    {
+        // dd('create');
+        return view('dashboard/extras');
+    }
+
+    public function social()
+    {
+        // dd('create');
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();        
+        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();       
+        return view('dashboard/boost-social', compact('my_created_events','my_subscribed_events'));
+    }
+
+    public function featured()
+    {
+        // dd('create');
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();        
+        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();
+        return view('dashboard/boost-featured', compact('my_created_events'));
+    }
+
     public function wallet()
     {
         // dd('create');

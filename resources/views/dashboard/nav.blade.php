@@ -221,68 +221,145 @@
 				</div>
 				<div class="wrapper">
 					<!-- Sidebar Holder -->
+					@if ((Auth::user()->user_type)  == 'host')	   
 					<nav id="sidebar" class="nav-sidebar">
-						<ul class="list-unstyled components" id="accordion">
-							<div class="user-profile">
-								<div class="dropdown user-pro-body">
-									<div><img src="dashboard\assets\images\faces\female\25.jpeg" alt="user-img" class="img-circle"></div>
-									<div class="mb-2"><a href="#" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">Hi</span> <span class="text-uppercase font-weight-semibold">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>  </a>
-									<br><span class="text-gray">Your Wallet: R{{ auth::user()->wallet }}</span>
+							<ul class="list-unstyled components" id="accordion">
+								<div class="user-profile">
+									<div class="dropdown user-pro-body">
+										<div><img src="dashboard\assets\images\faces\female\25.jpeg" alt="user-img" class="img-circle"></div>
+										<div class="mb-2"><a href="#" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">Hi</span> <span class="text-uppercase font-weight-semibold">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>  </a>
+										<br><span class="text-gray">Your Wallet: R{{ auth::user()->wallet }}</span>
+										</div>
 									</div>
 								</div>
-							</div>
+	
+								<li class="">
+									<a href="#homeSubmenu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+										<i class="fa fa-desktop mr-2"></i> Organizer
+									</a>
+									<ul class="collapse list-unstyled" id="homeSubmenu" data-parent="#accordion">
+									<li><a href="{{ url('create-events') }}">List an Event</a></li>
+									<li><a href="{{ url('dash') }}">View Your Events</a></li>
+									<li><a href="{{ url('boost-featured') }}">Boost Your Event on Featured Events</a></li>
+									<li><a href="{{ url('boost-social') }}">Boost Your Event on Social Media</a></li>
+									</ul>
+								</li>
+								<li class="">
+									<a href="#Apps" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+										<i class="fa fa-snowflake-o mr-2"></i> Account
+									</a>
+									<ul class="collapse list-unstyled" id="Apps" data-parent="#accordion">
+										<li>
+										<a href="{{ url('profile') }}">Profile</a>
+										</li>
+										<li>
+											<a href="{{ url('edit-profile') }}">Edit Profile</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#pageSubmenu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false"><i class="fa fa-area-chart mr-2"></i>Wallet/Payment Methods</a>
+									<ul class="collapse list-unstyled" id="pageSubmenu" data-parent="#accordion">
+										<li>
+										<a href="{{ url('wallet') }}">Add to Wallet </a>
+										</li>
+										<li>
+											<a href="#">Add Stripe details</a>
+										</li>									
+										<li>
+											<a href="#">Add Paypal details</a>
+										</li>
+									</ul>
+								</li>
+								
+								<li class="">
+									<a href="#Submenu6" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+										<i class="fa fa-shopping-cart mr-2"></i> Log Out
+									</a>
+									<ul class="collapse list-unstyled" id="Submenu6" data-parent="#accordion">
+										<li>
+										<a href="{{ url('logout')}}">log out</a>
+	
+										</li>
+									</ul>
+								</li>
+								</ul>
+						</nav>
+					@else 
+					<nav id="sidebar" class="nav-sidebar">
+							<ul class="list-unstyled components" id="accordion">
+								<div class="user-profile">
+									<div class="dropdown user-pro-body">
+										<div><img src="dashboard\assets\images\faces\female\25.jpeg" alt="user-img" class="img-circle"></div>
+										<div class="mb-2"><a href="#" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">Hi</span> <span class="text-uppercase font-weight-semibold">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>  </a>
+										<br><span class="text-gray">Your Wallet: R{{ auth::user()->wallet }}</span>
+										</div>
+									</div>
+								</div>
+	
+								<li class="">
+									<a href="#homeSubmenu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+										<i class="fa fa-desktop mr-2"></i> Organizer
+									</a>
+									<ul class="collapse list-unstyled" id="homeSubmenu" data-parent="#accordion">
+									<li><a href="{{ url('create-events') }}">List an Event</a></li>
+									<li><a href="{{ url('dash') }}">View Your Events</a></li>
+									<li><a href="{{ url('purchase-sponsorship') }}">Purchase Sponsorship Package</a></li>
+									<li><a href="{{ url('extras') }}">Purchase Extras(freebies)</a></li>									
+									<li><a href="{{ url('send-artworks') }}">Send Artworks for sponsorship</a></li>
+									</ul>
+								</li>
+								<li class="">
+									<a href="#Apps" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+										<i class="fa fa-snowflake-o mr-2"></i> Account
+									</a>
+									<ul class="collapse list-unstyled" id="Apps" data-parent="#accordion">
+										<li>
+										<a href="{{ url('profile') }}">Profile</a>
+										</li>
+										<li>
+											<a href="{{ url('edit-profile') }}">Edit Profile</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#pageSubmenu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false"><i class="fa fa-area-chart mr-2"></i>Wallet/Payment Methods</a>
+									<ul class="collapse list-unstyled" id="pageSubmenu" data-parent="#accordion">
+										<li>
+										<a href="{{ url('wallet') }}">Add to Wallet </a>
+										</li>
+										<li>
+											<a href="#">Add Stripe details</a>
+										</li>									
+										<li>
+											<a href="#">Add Paypal details</a>
+										</li>
+									</ul>
+								</li>
+								
+								<li class="">
+									<a href="#Submenu6" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+										<i class="fa fa-shopping-cart mr-2"></i> Log Out
+									</a>
+									<ul class="collapse list-unstyled" id="Submenu6" data-parent="#accordion">
+										<li>
+										<a href="{{ url('logout')}}">log out</a>
+	
+										</li>
+									</ul>
+								</li>
+								</ul>
+						</nav>
+					@endif
+					
 
-							<li class="">
-								<a href="#homeSubmenu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
-									<i class="fa fa-desktop mr-2"></i> Organizer
-								</a>
-								<ul class="collapse list-unstyled" id="homeSubmenu" data-parent="#accordion">
-                                <li><a href="{{ url('create-events') }}">Create Event</a></li>
-                                <li><a href="{{ url('dash') }}">View Events</a></li>
-								</ul>
-							</li>
-							<li class="">
-								<a href="#Apps" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
-									<i class="fa fa-snowflake-o mr-2"></i> Account
-								</a>
-								<ul class="collapse list-unstyled" id="Apps" data-parent="#accordion">
-									<li>
-                                    <a href="{{ url('profile') }}">Profile</a>
-									</li>
-									<li>
-										<a href="{{ url('edit-profile') }}">Edit Profile</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#pageSubmenu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false"><i class="fa fa-area-chart mr-2"></i>Wallet/Payment Methods</a>
-								<ul class="collapse list-unstyled" id="pageSubmenu" data-parent="#accordion">
-									<li>
-									<a href="{{ url('wallet') }}">Add to Wallet </a>
-									</li>
-									<li>
-										<a href="#">Stripe</a>
-									</li>									
-									<li>
-										<a href="#">Stripe</a>
-									</li>
-								</ul>
-							</li>
-							
-							<li class="">
-								<a href="#Submenu6" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
-									<i class="fa fa-shopping-cart mr-2"></i> Log Out
-								</a>
-								<ul class="collapse list-unstyled" id="Submenu6" data-parent="#accordion">
-									<li>
-									<a href="{{ url('logout')}}">log out</a>
+					{{-- Start of Content --}}
 
-									</li>
-								</ul>
-							</li>
-							</ul>
-					</nav>
 					@yield('content')
+
+					{{-- End of Content --}}
+				
+				
 				</div>
 			</div>
 

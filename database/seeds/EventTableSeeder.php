@@ -15,26 +15,35 @@ class EventTableSeeder extends Seeder
     {
         $event = new Event;
         $event->name = 'Test Event One';
+        $event->quantity = '230';
         $event->user_id = 1;
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
         $event->amount = 49.99;
+        $event->description = 'Need a chimp account';
+        $event->image = '15746837252.jpeg';
         $event->save();
 
         $event = new Event;
-        $event->name = 'Test Event One';
+        $event->name = 'Test Event Two';
+        $event->quantity = '20';
         $event->user_id = 1;
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
         $event->amount = 99.99;
+        $event->description = 'Need a chimp account';
+        $event->image = '15746837252.jpeg';
         $event->save();
 
         $event = new Event;
-        $event->name = 'Test Event One';
+        $event->name = 'Test Event Three';
+        $event->quantity = '2000';
         $event->user_id = 2;
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
         $event->amount = 50;
+        $event->description = 'Need a chimp account';
+        $event->image = '15746837252.jpeg';
         $event->save();
 
     }
