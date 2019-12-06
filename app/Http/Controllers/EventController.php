@@ -26,7 +26,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::get();
+        $events = Event::with('packages')->get();
         return view('view-events', compact('events'));
 
     }

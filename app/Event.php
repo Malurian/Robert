@@ -9,4 +9,9 @@ class Event extends Model
     protected $fillable = [
         'name','user_id','date','address','map','description','image','default.jpg', 'quantity'
     ];
+
+    public function packages()
+    {
+        return $this->hasMany(Package::class);
+    }
 }
