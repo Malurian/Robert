@@ -59,8 +59,18 @@ class EventController extends Controller
         $input['image'] = $imageName;
         $event = Event::create($input);
 
-        $package = Package::create($input);
-
+        for ($i=1; $i <= 9 ; $i++) { 
+            if ($request->get('package'.$id) && $request->get('cost'.$id)) {
+                $package = Package::create([
+                    'event_id' => $event->id,
+                    'name' => $request->get('package'.$id),
+                    'amount' => $request->get('cost'.$id),
+                    'quantity' => $request->get('quantity'.$id),
+                    'description' => $request->get('description'.$id),
+                ]);
+            }
+            
+        }
 
         $message = 'Event Created Successfully';
 
