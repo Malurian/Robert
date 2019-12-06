@@ -95,19 +95,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">First Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-1" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-1" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-1" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-1" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
@@ -120,19 +120,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">Second Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-2" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-2" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-2" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-2" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
@@ -145,19 +145,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">Third Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-3" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-3" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-3" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-3" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
@@ -170,19 +170,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">Fourth Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-4" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-4" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-4" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-4" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
@@ -195,19 +195,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">Fifth Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-5" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-5" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-5" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-5" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
@@ -220,19 +220,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">Sixth Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-6" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-6" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-6" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-6" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
@@ -245,19 +245,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">Seventh Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-7" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-7" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-7" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-7" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
@@ -270,19 +270,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">Eighth Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-8" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-8" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-8" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-8" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
@@ -295,19 +295,19 @@
 				<div class="card-body ">																
 						<div class="form-group">
 								<label class="form-label">Ninth Package</label>
-								<input type="text" class="form-control" name="package-name" placeholder="Package Cost">
+								<input type="text" class="form-control" name="package-9" placeholder="Package Cost">
 						</div>																			
 						<div class="form-group">
 								<label class="form-label">Cost</label>
-								<input type="text" class="form-control" name="package-cost" placeholder="Package Cost">
+								<input type="text" class="form-control" name="cost-9" placeholder="Package Cost">
 						</div>										
 						<div class="form-group">
 								<label class="form-label">Quantity Available</label>
-								<input type="text" class="form-control" name="quantity" placeholder="Package Quantity">
+								<input type="text" class="form-control" name="quantity-9" placeholder="Package Quantity">
 						</div>
 						<div class="form-group">
 								<label class="form-label">Package Description <span class="form-label-small ml-3">56/100</span></label>
-								<textarea class="form-control" name="package-description" rows="7" placeholder="Description"></textarea>
+								<textarea class="form-control" name="description-9" rows="7" placeholder="Description"></textarea>
 						</div>
 				</div>
 			</div>
