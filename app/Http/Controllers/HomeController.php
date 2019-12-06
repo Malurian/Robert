@@ -16,7 +16,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
+        $this->middleware(['auth', 'verified']);
     }
 
     /**
@@ -28,6 +29,6 @@ class HomeController extends Controller
     {
         $my_created_events = Event::where('user_id', Auth::user()->id)->get();
         $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();
-        return view('home', compact('my_created_events','my_subscribed_events'));
+        return view('home', compact('my_created_events', 'my_subscribed_events'));
     }
 }

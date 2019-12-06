@@ -10,6 +10,17 @@ use Auth;
 class DashboardController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        // $this->middleware('auth');
+        $this->middleware(['auth', 'verified']);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -18,7 +29,7 @@ class DashboardController extends Controller
     {
         $my_created_events = Event::where('user_id', Auth::user()->id)->get();
         $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();
-        return view('dashboard/dash', compact('my_created_events','my_subscribed_events'));
+        return view('dashboard/dash', compact('my_created_events', 'my_subscribed_events'));
     }
 
     /**
@@ -53,23 +64,23 @@ class DashboardController extends Controller
     public function social()
     {
         // dd('create');
-        $my_created_events = Event::where('user_id', Auth::user()->id)->get();        
-        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();       
-        return view('dashboard/boost-social', compact('my_created_events','my_subscribed_events'));
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();
+        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();
+        return view('dashboard/boost-social', compact('my_created_events', 'my_subscribed_events'));
     }
 
     public function form()
     {
         // dd('create');
-        $my_created_events = Event::where('user_id', Auth::user()->id)->get();        
-        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();       
-        return view('dashboard/boost-form', compact('my_created_events','my_subscribed_events'));
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();
+        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();
+        return view('dashboard/boost-form', compact('my_created_events', 'my_subscribed_events'));
     }
 
     public function featured()
     {
         // dd('create');
-        $my_created_events = Event::where('user_id', Auth::user()->id)->get();        
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();
         $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();
         return view('dashboard/boost-featured', compact('my_created_events'));
     }

@@ -13,7 +13,8 @@
 
 Route::get('/', 'WelcomeController@index')->name('index');
 
-Auth::routes();
+// Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/index', 'HomeController@index')->name('index');
 
