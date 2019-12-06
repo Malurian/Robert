@@ -114,7 +114,7 @@
                                     </form>
                                 </li>
                                 <li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
+                                <li><a href="{{ route('register') }}" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
                             </ul>
                         </nav>
                         <!-- /Navigation -->
@@ -220,30 +220,55 @@
                                             <option value="sponsor">Become a Sponsor</option>
                                         </select>
                                     </div>
+                                    @error('user_type')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="text" placeholder="User Name" title="" data-toggle="tooltip" class="form-control input-name @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus data-original-title="Name is required">
                                     </div>
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="text"  placeholder="E-mail"  title="" data-toggle="tooltip" class="form-control input-password @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" data-original-title="Password">
                                     </div>
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-sm-12">
-                                    <p>Password must be 8 characters</p>
+                                    <p class="caption-text">Password must be 8 characters</p>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="password"  placeholder="Password"  title="" data-toggle="tooltip" class="form-control input-password @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" data-original-title="Password">
-                                    </div>
+                                    </div>                                
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="password"  placeholder="Password"  title="" data-toggle="tooltip" class="form-control input-password" name="password_confirmation" required autocomplete="new-password" data-original-title="Password">
                                     </div>
-                                </div>                                  
+                                    @error('password_confirmation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror  
+                                </div>                                
                                 <div class="col-sm-12">
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-theme btn-block submit-button" data-animation-delay="100" data-animation="flipInY"> Register Now <i class="fa fa-arrow-circle-left"></i></button>

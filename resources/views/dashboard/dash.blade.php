@@ -10,7 +10,6 @@
 								<h4 class="page-title">Dashboard for Sponsors</h4>
 								@endif
 							
-						
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
@@ -129,7 +128,7 @@
 							<div class="col-lg-12 col-xl-8 col-md-12">
 								<div class="card ">
 									<div class="card-header">
-										<h5 class="card-title">Events Table</h5>
+										<h5 class="card-title">Your Events Table</h5>
 									</div>
 									<div class="card-body">
 										<div class="table-responsive">
@@ -167,7 +166,7 @@
 							<div class="col-lg-12 col-xl-8 col-md-12">
 								<div class="card ">
 									<div class="card-header">
-										<h5 class="card-title">Subscribed Events</h5>
+										<h5 class="card-title">Your Subscribed Events</h5>
 									</div>
 									<div class="card-body">
 										<div class="table-responsive">

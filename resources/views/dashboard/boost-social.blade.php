@@ -14,7 +14,7 @@
 						<div class="col-lg-12 col-xl-8 col-md-12">
 								<div class="card ">
 									<div class="card-header">
-										<h5 class="card-title">Boost Events on Social Media</h5>
+										<h5 class="card-title">Events Table</h5>
 									</div>
 									<div class="card-body">
 										<div class="table-responsive">
@@ -29,13 +29,15 @@
 													</tr>
 												</thead>
 												<tbody>
-													@foreach ($my_subscribed_events as $event)
+													@foreach ($my_screated_events as $event)
 														<tr>
 															<td>{{ $event->event->name }}</td>
 															<td>2019/08/17</td>
 															<td>Staff</td>
 															<td>2019/11/30</td>
-															<td><span class="badge badge-success">Inactive</span></td>
+															<td><span class="badge badge-success">
+																<a href="">Boost</a>
+																</span></td>
 														</tr>
 													@endforeach
 													

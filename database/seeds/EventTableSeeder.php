@@ -20,6 +20,8 @@ class EventTableSeeder extends Seeder
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
         $event->amount = 49.99;
+        $event->description = 'Need a chimp account';
+        $event->image = '15746837252.jpeg';
         $event->save();
 
         $event = new Event;
@@ -29,6 +31,8 @@ class EventTableSeeder extends Seeder
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
         $event->amount = 99.99;
+        $event->description = 'Need a chimp account';
+        $event->image = '15746837252.jpeg';
         $event->save();
 
         $event = new Event;
@@ -38,6 +42,8 @@ class EventTableSeeder extends Seeder
         $event->date = Carbon::now()->format('Y-m-d H:i:s');
         $event->address = 'Online Event';
         $event->amount = 50;
+        $event->description = 'Need a chimp account';
+        $event->image = '15746837252.jpeg';
         $event->save();
 
     }

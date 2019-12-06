@@ -53,13 +53,17 @@ class DashboardController extends Controller
     public function social()
     {
         // dd('create');
-        return view('dashboard/boost-social');
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();        
+        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();       
+        return view('dashboard/boost-social', compact('my_created_events','my_subscribed_events'));
     }
 
     public function featured()
     {
         // dd('create');
-        return view('dashboard/boost-featured');
+        $my_created_events = Event::where('user_id', Auth::user()->id)->get();        
+        $my_subscribed_events = EventUser::where('user_id', Auth::user()->id)->with('event')->get();
+        return view('dashboard/boost-featured', compact('my_created_events'));
     }
 
     public function wallet()
