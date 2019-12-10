@@ -133,6 +133,7 @@
                                                         <p class="caption-text">{{$event->description}} </p>
                                                         <p class="caption-more">
                                                             <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Subscribe</a>
+                                                            <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Event Details</a>
                                                             {{-- 
                                                             <form method="POST" action="{{ url('subscribe') }}">
                                                                 <input type="hidden" name="event_id" value="{{ $event->id }}">
@@ -143,9 +144,6 @@
                                                             </form> 
                                                             --}}
 
-                                                        </p>
-                                                        <p class="caption-more">
-                                                            <a href="{{ url('event/'.$event->id) }}" class="btn btn-theme">Event Details</a>
                                                         </p>
                                                     </div>
                                                 </div>

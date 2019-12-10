@@ -42,7 +42,7 @@
 										<div class="col-8">
 											<div class="card-body p-4">
 												<h1 class="mb-3">7</h1>
-												<h5 class="font-weight-normal mb-0">Followed Events</h5>
+												<h5 class="font-weight-normal mb-0">Subscribed Events</h5>
 											</div>
 										</div>
 									</div>

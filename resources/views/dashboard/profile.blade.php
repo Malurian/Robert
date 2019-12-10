@@ -17,8 +17,8 @@
 									</div>
 								    <div class="card-body p-0">
 										<div class="card-body bg-primary text-white">
-											<img src="dashboard\assets\images\faces\male\16.jpeg" alt="" class="profile-img img-responsive center-block">
-											<a href="editprofile.html" class="profile-image">
+											<img src="{{ asset('/images/'. $user->avatar ) }}" alt="" class="profile-img img-responsive center-block">
+										<a href="{{ url('edit-profile') }}" class="profile-image">
 												<span class="fa fa-pencil" aria-hidden="true"></span>
 											</a>
 											<div class="profile-label mt-3">
@@ -35,7 +35,7 @@
 											</div>
 
 											<div class="profile-since">
-												Member since: Jan 2012
+												Member since:  {{ auth()->user()->created_at }} 
 											</div>
 										</div>
                                         <div class="border-bottom align-items-center">
@@ -75,7 +75,7 @@
 													<i class="fa fa-link" aria-hidden="true"></i>
 												</div>
 												<div class="media-body ml-5 ">
-													<h6 class="mediafont text-dark mb-0">Websites</h6><a class="d-block" href="">http://eventsponsors.com</a> <a class="d-block" href="">http://eventsponsors.net</a>
+													<h6 class="mediafont text-dark mb-0">Websites</h6><a class="d-block" href="">{{ auth()->user()->website }}</a> <a class="d-block" href=""> {{ auth()->user()->website }} </a>
 												</div>
 												<!-- media-body -->
 											</div>
@@ -87,7 +87,7 @@
 													<i class="fa fa-envelope-o" aria-hidden="true"></i>
 												</div>
 												<div class="media-body ml-5">
-													<h6 class="mediafont text-dark mb-0">{{ auth()->user()->email }}</h6><a class="d-block" href="">georgemestayer@eventsponsors.com</a>
+													<h6 class="mediafont text-dark mb-0">{{ auth()->user()->email }}</h6><a class="d-block" href="">{{ auth()->user()->email }}</a>
 												</div>
 												<!-- media-body -->
 											</div>
@@ -97,7 +97,7 @@
 													<i class="fa fa-twitter" aria-hidden="true"></i>
 												</div>
 												<div class="media-body ml-5">
-													<h6 class="mediafont text-dark mb-0">Twitter</h6><a class="d-block" href="#">@eventsponsors</a>
+													<h6 class="mediafont text-dark mb-0">Twitter</h6><a class="d-block" href="#">{{ auth()->user()->twitter }}</a>
 												</div>
 												<!-- media-body -->
 											</div>
@@ -123,28 +123,44 @@
 																<td><strong>Full Name :</strong> {{ auth()->user()->name }}</td>
 															</tr>
 															<tr>
-																<td><strong>Location :</strong> USA</td>
+																<td><strong>Location :</strong> {{ auth()->user()->country }}</td>
 															</tr>
 															<tr>
-																<td><strong>Languages :</strong> English, German, Spanish.</td>
+																<td><strong>Languages :</strong>{{ auth()->user()->languages }}</td>
+															</tr>
+															<tr>
+																<td><strong>Username :</strong> {{ auth()->user()->username }}</td>
+															</tr>
+															<tr>
+																<td><strong>DOB :</strong> +{{ auth()->user()->date }}</td>
 															</tr>
 														</tbody>
 														<tbody class="col-lg-6 p-0">
 															<tr>
-																<td><strong>Website :</strong> eventsponsors.com</td>
+																<td><strong>Website :</strong> {{ auth()->user()->website }}</td>
 															</tr>
 															<tr>
 																<td><strong>Email :</strong> {{ auth()->user()->email }}</td>
 															</tr>
 															<tr>
-																<td><strong>Phone :</strong> +125 254 3562 </td>
+																<td><strong>User Type :</strong> +{{ auth()->user()->user_type }}</td>
+															</tr>
+															<tr>
+																<td><strong>Phone :</strong> +{{ auth()->user()->mobile }}</td>
+															</tr>
+															<tr>
+																<td><strong>Bio :</strong> {{ auth()->user()->about }}</td>
+															</tr>
+															<tr>
+																<td><strong>Wallet :</strong> R{{ auth()->user()->wallet }}</td>
 															</tr>
 														</tbody>
 													</table>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-primary">
+										</div>
+										{{-- <div class="panel panel-primary">
 											<div class=" tab-menu-heading">
 												<div class="tabs-menu2">
 													<!-- Tabs -->
@@ -484,7 +500,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> --}}
 									</div>
 								</div>
 							</div>

@@ -19,11 +19,20 @@
 									</div>
 									<div class="card-body">
 										<div class="form-group">
-											<label class="form-label">Event Title</label>
+											<label class="form-label">Event Title*</label>
 											<input type="text" class="form-control" name="name" placeholder="Event Name">
 										</div>
-                                        
-                                        <label>Event Time:</label>
+										<div class="form-group">
+											<label class="form-label">General Event Description*</label>
+											<textarea class="form-control" name="description" rows="7" placeholder="Description"></textarea>
+										</div>
+
+										<div class="form-group">
+											<label class="form-label">Location*</label>
+												<input type="text" class="form-control" name="address" placeholder="Event Location">	
+										</div>
+                                        <label>Event Time(24hr)</label><br/>
+                                        <label>From:*</label>
 										<div class="wd-150 mg-b-30">
 											<div class="input-group">
 												<div class="input-group-prepend">
@@ -31,25 +40,26 @@
 														<i class="fa fa-clock-o tx-16 lh-0 op-6"></i>
 													</div>
 												</div><!-- input-group-prepend -->
-												<input class="form-control" id="tpBasic" placeholder="Set time" type="text">
+												<input class="form-control" id="tpBasic" placeholder="Set time" name="to_time" type="time">
 											</div>
 										</div>
-										<div class="form-group">
-											<label class="form-label">General Event Description <span class="form-label-small ml-3">56/100</span></label>
-											<textarea class="form-control" name="description" rows="7" placeholder="Description"></textarea>
-										</div>
-
-										<div class="form-group">
-											<label class="form-label">Location</label>
-												<input type="text" class="form-control" name="address" placeholder="Event Location">	
+                                        <label>To:*</label>
+										<div class="wd-150 mg-b-30">
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<div class="input-group-text">
+														<i class="fa fa-clock-o tx-16 lh-0 op-6"></i>
+													</div>
+												</div><!-- input-group-prepend -->
+												<input class="form-control" id="tpBasic" placeholder="Set time" name="from_time" type="time">
+											</div>
 										</div>
 										<div class="form-group ">
-											<label class="form-label">Date of Event</label>
-												<input type="date" class="form-control" name="date" placeholder="Event Date">
-										
+											<label class="form-label">Date of Event*</label>
+												<input type="date" class="form-control" name="date" placeholder="Event Date">										
                                         </div>
                                         <div class="card-header">
-                                            <h3 class="card-title">Event Image</h3>
+                                            <h3 class="card-title">Event Image*</h3>
                                         </div>
                                         <div class=" card-body">
                                             <div class="row">

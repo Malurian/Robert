@@ -53,8 +53,8 @@
                 <div class="top-line">
                     <div class="container">
                         <ul class="user-menu">
-                            <li><a href="#popup-login"  data-toggle="modal"><i class="fa fa-file-text-o"></i> Register Now</a></li>
-                            <li><a href="#popup-login" data-toggle="modal"><i class="fa fa-user"></i> Login</a></li>
+                            <li><a href="{{ url('register') }}"  data-toggle="modal"><i class="fa fa-file-text-o"></i> Register Now</a></li>
+                            <li><a href="{{ url('login') }}" data-toggle="modal"><i class="fa fa-user"></i> Login</a></li>
                         </ul>
                         <div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div>
                     </div>
@@ -152,7 +152,7 @@
 
         </div>
         <!-- Popup: Login -->
-        <div class="modal fade login-register" id="popup-login" tabindex="-1" role="dialog" aria-hidden="true">
+        {{-- <div class="modal fade login-register" id="popup-login" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg" id="main-slider">                 
                 <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="form-background">
@@ -207,7 +207,7 @@
                                 <span class="title-inner">Register</span>
                             </h1>
                         </div>
-                        <form method="post" action="{{ route('register') }}" class="registration-form alt" name="registration-form-alt" id="registration-form-alt">
+                        <form method="post" action="" class="registration-form alt" name="registration-form-alt" id="registration-form-alt">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-12 form-alert"></div>
@@ -281,7 +281,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
         <!-- /Popup: Login -->
 
 

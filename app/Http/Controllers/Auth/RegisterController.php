@@ -7,6 +7,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Avatar;
+use Storage;
 
 class RegisterController extends Controller
 {
@@ -51,6 +53,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'username' => ['required', 'string', 'max:20', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -63,11 +66,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'username' => $data['username'],
+            'about' => $data['about'],
+            'website' => $data['website'],
+            'date' => $data['date'],
+            'country' => $data['country'],
+            'mobile' => $data['mobile'],
             'user_type' => $data['user_type'],
             'password' => Hash::make($data['password']),
+            
         ]);
+        ; // quality = 100
+        $avatar = Avatar::create($user->name)->getImageObject()->encode('png');
+        Storage::disk('local')->put('profile/'.$user->id.'/avatar.png', (string) $avatar );
+        return $user;
     }
 }

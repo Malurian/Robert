@@ -142,37 +142,37 @@
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 										<ul class="drop-icon-wrap p-1">
 											<li>
-												<a href="email.html" class="drop-icon-item">
+												<a href="mailto:{{ auth()->user()->email }}" class="drop-icon-item">
 													<i class="fe fe-mail text-dark"></i>
 													<span class="block"> E-mail</span>
 												</a>
 											</li>
-											<li>
-												<a href="calendar2.html" class="drop-icon-item">
+											{{-- <li>
+												<a href="" class="drop-icon-item">
 													<i class="fe fe-calendar text-dark"></i>
 													<span class="block">calendar</span>
 												</a>
-											</li>
+											</li> --}}
 											<li>
-												<a href="maps.html" class="drop-icon-item">
+												<a href="https://maps.google.com" class="drop-icon-item" target="_blank">
 													<i class="fe fe-map-pin text-dark"></i>
 													<span class="block">map</span>
 												</a>
 											</li>
-											<li>
+											{{-- <li>
 												<a href="cart.html" class="drop-icon-item">
 													<i class="fe fe-shopping-cart text-dark"></i>
 													<span class="block">Cart</span>
 												</a>
-											</li>
-											<li>
+											</li> --}}
+											{{-- <li>
 												<a href="chat.html" class="drop-icon-item">
 													<i class="fe fe-message-square text-dark"></i>
 													<span class="block">chat</span>
 												</a>
-											</li>
+											</li> --}}
 											<li>
-												<a href="profile.html" class="drop-icon-item">
+												<a href="{{ url('profile') }}" class="drop-icon-item">
 													<i class="fe fe-phone-outgoing text-dark"></i>
 													<span class="block">contact</span>
 												</a>
@@ -226,7 +226,7 @@
 							<ul class="list-unstyled components" id="accordion">
 								<div class="user-profile">
 									<div class="dropdown user-pro-body">
-										<div><img src="dashboard\assets\images\faces\female\25.jpeg" alt="user-img" class="img-circle"></div>
+										<div><img src="{{ asset('/images/'. $user->avatar ) }}" alt="user-img" class="img-circle"></div>
 										<div class="mb-2"><a href="#" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">Hi</span> <span class="text-uppercase font-weight-semibold">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>  </a>
 										<br><span class="text-gray">Your Wallet: R{{ auth::user()->wallet }}</span>
 										</div>
@@ -302,7 +302,6 @@
 										<i class="fa fa-desktop mr-2"></i> Organizer
 									</a>
 									<ul class="collapse list-unstyled" id="homeSubmenu" data-parent="#accordion">
-									<li><a href="{{ url('create-events') }}">List an Event</a></li>
 									<li><a href="{{ url('dash') }}">View Your Events</a></li>
 									<li><a href="{{ url('purchase-sponsorship') }}">Purchase Sponsorship Package</a></li>
 									<li><a href="{{ url('extras') }}">Purchase Extras(freebies)</a></li>									

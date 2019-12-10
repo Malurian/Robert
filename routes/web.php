@@ -31,6 +31,7 @@ Route::resource('subscriber', 'SubscribersController');
 Route::resource('event', 'EventController');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::post('update', 'UserController@update');
 
 
 Route::get('dash', 'DashboardController@index');

@@ -29,9 +29,9 @@
 													</tr>
 												</thead>
 												<tbody>
-													@foreach ($my_screated_events as $event)
+													@foreach ($my_created_events as $event)
 														<tr>
-															<td>{{ $event->event->name }}</td>
+															<td>{{ $event->name }}</td>
 															<td>2019/08/17</td>
 															<td>Staff</td>
 															<td>2019/11/30</td>

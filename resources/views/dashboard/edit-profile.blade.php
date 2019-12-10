@@ -23,7 +23,7 @@
 												</div>
 												<div class="col-12">
 													<h4 class="mb-1 mt-2 ">{{ auth()->user()->name }}</h4>
-													<p class="mb-0">Adminor Administrator</p>
+													<p class="mb-0">Event {{ auth()->user()->user_type }}</p>
 												</div>
 											</div>
 									    </form></div>
@@ -38,11 +38,11 @@
 											</div>
 											<div class="form-group">
 											    <label class="form-label">About</label>
-											    <textarea class="form-control" rows="2" placeholder="My Bio"></textarea>
+											    <textarea class="form-control" rows="2" placeholder="My Bio">{{ auth()->user()->about }}</textarea>
 											</div>
 											<div class="form-group">
 												<label class="form-label">Website</label>
-												<input class="form-control" placeholder="http://Adminor.com">
+												<input class="form-control" placeholder="{{ auth()->user()->website }}">
 											</div>
 											<div class="form-footer">
 												<button class="btn btn-secondary btn-block">Save</button>
@@ -60,7 +60,7 @@
 												<i class="fa fa-link" aria-hidden="true"></i>
 											</div>
 											<div class="media-body ml-5 ">
-												<h6 class="mediafont text-dark mb-0">Websites</h6><a class="d-block" href="">http://adminor.com</a> <a class="d-block" href="">http://adminor.net</a>
+												<h6 class="mediafont text-dark mb-0">Websites</h6><a class="d-block" href="">{{ auth()->user()->website }}</a> <a class="d-block" href="">{{ auth()->user()->website }}</a>
 											</div>
 											<!-- media-body -->
 										</div>
@@ -72,7 +72,7 @@
 												<i class="fa fa-envelope-o" aria-hidden="true"></i>
 											</div>
 											<div class="media-body ml-5">
-												<h6 class="mediafont text-dark mb-0">Email Address</h6><a class="d-block" href=""> christopher@adminor.com</a>
+												<h6 class="mediafont text-dark mb-0">Email Address</h6><a class="d-block" href=""> {{ auth()->user()->email }}</a>
 											</div>
 											<!-- media-body -->
 										</div>
@@ -82,7 +82,7 @@
 												<i class="fa fa-twitter" aria-hidden="true"></i>
 											</div>
 											<div class="media-body ml-5">
-												<h6 class="mediafont text-dark mb-0">Twitter</h6><a class="d-block" href="#">@adminor</a>
+												<h6 class="mediafont text-dark mb-0">Twitter</h6><a class="d-block" href="#">{{ auth()->user()->username }}</a>
 											</div>
 											<!-- media-body -->
 										</div>
@@ -118,22 +118,23 @@
 															</button>
 														</div>
 														<div class="text-center text-sm-right">
-															<span class="badge badge-secondary">administrator</span>
-															<div class="text-muted"><small>Joined 23 Oct 2018</small></div>
+															<span class="badge badge-secondary">{{ auth()->user()->user_type }}</span>
+															<div class="text-muted"><small>{{ auth()->user()->created_at }}</small></div>
 														</div>
 													</div>
 												</div>
 
 												<div class="tab-content pt-3">
 													<div class="tab-pane active">
-														<form class="form" novalidate="">
-															<div class="row">
+													<form class="form" method="post" action="{{ url('update') }}">
+														@csrf	
+														<div class="row">
 																<div class="col">
 																	<div class="row">
 																		<div class="col">
 																			<div class="form-group">
 																				<label class="form-label">Full Name</label>
-																				<input type="text" class="form-control" name="example-text-input" value="{{ auth()->user()->name }}" placeholder="Name">
+																				<input type="text" class="form-control" name="name" value="{{ auth()->user()->name }}" placeholder="Name">
 																			</div>
 																		</div>
 																		<div class="col">
@@ -147,14 +148,14 @@
 																		<div class="col">
 																			<div class="form-group">
 																				<label class="form-label">Email</label>
-																				<input class="form-control" type="text" value="{{ auth()->user()->email }}" placeholder="user@example.com">
+																				<input class="form-control" name="email" type="text" value="{{ auth()->user()->email }}" placeholder="user@example.com">
 																			</div>
 																		</div>
 
 																		<div class="col">
 																			<div class="form-group">
 																				<label class="form-label">Website</label>
-																				<input class="form-control" placeholder="http://Adminor.com">
+																				<input class="form-control" name="website" placeholder="{{ auth()->user()->website }}">
 																			</div>
 																		</div>
 																	</div>
@@ -162,7 +163,7 @@
 																		<div class="col mb-3">
 																			<div class="form-group">
 																				<label class="form-label">About</label>
-																				<textarea class="form-control" rows="2" placeholder="My Bio"></textarea>
+																				<textarea class="form-control" rows="2" name="about" placeholder="{{ auth()->user()->about }}"></textarea>
 																			</div>
 																		</div>
 																	</div>
@@ -176,10 +177,7 @@
 																		<div class="form-group">
 																			<label class="form-label">Country</label>
 																			<select name="country" id="select-countries" class="form-control custom-select">
-																				<option value="br" data-data='{"image": "dashboard\assets/images/flags/br.svg"}'>Brazil</option>
-																				<option value="cz" data-data='{"image": "dashboard\assets/images/flags/cz.svg"}'>Czech Republic</option>
-																				<option value="de" data-data='{"image": "dashboard\assets/images/flags/de.svg"}'>Germany</option>
-																				<option value="pl" data-data='{"image": "dashboard\assets/images/flags/pl.svg"}' selected="">Poland</option>
+																				<option value="{{ auth()->user()->country }}" data-data='{"image": "dashboard\assets/images/flags/br.svg"}'>{{ auth()->user()->country }}</option>
 																			</select>
 																		</div>
 																	</div>
@@ -373,7 +371,7 @@
 																	<div class="col">
 																		<div class="form-group">
 																			<label class="form-label">Mobile <span class="d-none d-xl-inline">No</span></label>
-																			<input class="form-control" type="num" placeholder="Enter Mobile no">
+																			<input class="form-control" type="num" value="{{ auth()->user()->mobile }}" placeholder="Enter Mobile no">
 																		</div>
 																	</div>
 																</div>
@@ -416,7 +414,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="card">
+								{{-- <div class="card">
 									<div class="card-header">
 										<h3 class="card-title">Add  Events And Upload Images</h3>
 									</div>
@@ -521,7 +519,7 @@
 											</tbody>
 										</table>
 									</div>
-								</div>
+								</div> --}}
 							</div>
 						</div>
 
