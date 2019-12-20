@@ -35,7 +35,7 @@
 											</div>
 
 											<div class="profile-since">
-												Member since:  {{ auth()->user()->created_at }} 
+												Member since:  {{ auth()->user()->created_at->toFormattedDateString() }} 
 											</div>
 										</div>
                                         <div class="border-bottom align-items-center">

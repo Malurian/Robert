@@ -119,7 +119,7 @@
 														</div>
 														<div class="text-center text-sm-right">
 															<span class="badge badge-secondary">{{ auth()->user()->user_type }}</span>
-															<div class="text-muted"><small>{{ auth()->user()->created_at }}</small></div>
+															<div class="text-muted"><small>Member since: {{ auth()->user()->created_at->toFormattedDateString() }}</small></div>
 														</div>
 													</div>
 												</div>

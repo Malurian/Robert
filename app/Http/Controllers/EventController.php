@@ -61,11 +61,11 @@ class EventController extends Controller
         $event = Event::create($input);
 
         for ($i=1; $i <= 9 ; $i++) { 
-            if ($request->get('package-'.$i) && $request->get('cost-'.$i)) {
+            if ($request->get('package-'.$i) && $request->get('amount-'.$i)) {
                 $package = Package::create([
                     'event_id' => $event->id,
                     'name' => $request->get('package-'.$i),
-                    'amount' => $request->get('cost-'.$i),
+                    'amount' => $request->get('amount-'.$i),
                     'quantity' => $request->get('quantity-'.$i),
                     'description' => $request->get('description-'.$i),
                 ]);

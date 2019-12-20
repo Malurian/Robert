@@ -226,7 +226,7 @@
 							<ul class="list-unstyled components" id="accordion">
 								<div class="user-profile">
 									<div class="dropdown user-pro-body">
-										<div><img src="{{ asset('/images/'. $user->avatar ) }}" alt="user-img" class="img-circle"></div>
+										<div><img src="{{ asset('/images/'. auth::user()->avatar ) }}" alt="user-img" class="img-circle"></div>
 										<div class="mb-2"><a href="#" class="" data-toggle="" aria-haspopup="true" aria-expanded="false"> <span class="font-weight-semibold">Hi</span> <span class="text-uppercase font-weight-semibold">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>  </a>
 										<br><span class="text-gray">Your Wallet: R{{ auth::user()->wallet }}</span>
 										</div>

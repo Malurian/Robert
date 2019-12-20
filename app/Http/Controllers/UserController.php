@@ -82,8 +82,7 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {
-        dd('success');
-        //
+        return view('dash.edit-profile');
     }
 
     /**
